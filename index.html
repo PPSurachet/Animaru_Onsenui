@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlearnHub</title>
+
+    <!-- import onsen ui css -->
+    <link rel="stylesheet" href="/assets/css/onsenui.css">
+    <link rel="stylesheet" href="/assets/css/onsen-css-components.min.css">
+
+    <!-- import css  -->
+    <link rel="stylesheet" href="/assets/css/Home.css">
+    <link rel="stylesheet" href="/assets/css/ฺBasket.css">
+    <link rel="stylesheet" href="/assets/css/Myshop.css">
+    <link rel="stylesheet" href="/assets/css/Setting.css">
+</head>
+
+<body>
+    <ons-page>
+        <ons-toolbar>
+            <div class="center">A N I M A R U</div>
+        </ons-toolbar>
+        <ons-tabbar swipeable position="auto">
+            <ons-tab page="views/Home.html" label="Home" icon="md-home" active>
+            </ons-tab>
+            <ons-tab page="views/Basket.html" label="Cart" icon="md-shopping-cart">
+            </ons-tab>
+            <ons-tab page="views/Myshop.html" label="Shop" icon="md-store">
+            </ons-tab>
+            <ons-tab page="views/Setting.html" label="Favourite" icon="md-settings">
+            </ons-tab>
+        </ons-tabbar>
+    </ons-page>
+</body>
+
+<!-- import firebase -->
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script src="/assets/js/Firebase.js"></script>
+
+<!-- import library  -->
+<script src="/assets/js/onsenui.min.js"></script>
+<script src="/assets/lib/jquery-3.5.1.min.js"></script>
+
+</html>
