@@ -1,0 +1,11 @@
+.tabbar__button{
+    background-color: #FFC149;
+    color: white;
+    font-weight: bold;
+}
+
+:checked+.tabbar__button{
+    color: black;
+    background-color: #FFC149;
+    box-shadow: none;
+}

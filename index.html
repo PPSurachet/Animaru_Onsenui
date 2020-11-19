@@ -11,25 +11,26 @@
     <link rel="stylesheet" href="/assets/css/onsen-css-components.min.css">
 
     <!-- import css  -->
+    <link rel="stylesheet" href="/assets/css/genaral.css">
     <link rel="stylesheet" href="/assets/css/Home.css">
     <link rel="stylesheet" href="/assets/css/ฺBasket.css">
-    <link rel="stylesheet" href="/assets/css/Myshop.css">
+    <link rel="stylesheet" href="/assets/css/Search.css">
     <link rel="stylesheet" href="/assets/css/Setting.css">
 </head>
 
 <body>
     <ons-page>
         <ons-toolbar>
-            <div class="center">A N I M A R U</div>
+            <img src="/assets/image/Group 297.png" alt="" srcset="">
         </ons-toolbar>
-        <ons-tabbar swipeable position="auto">
+        <ons-tabbar swipeable position="top">
             <ons-tab page="views/Home.html" label="Home" icon="md-home" active>
+            </ons-tab>
+            <ons-tab page="views/Search.html" label="Search" icon="md-search">
             </ons-tab>
             <ons-tab page="views/Basket.html" label="Cart" icon="md-shopping-cart">
             </ons-tab>
-            <ons-tab page="views/Myshop.html" label="Shop" icon="md-store">
-            </ons-tab>
-            <ons-tab page="views/Setting.html" label="Favourite" icon="md-settings">
+            <ons-tab page="views/Setting.html" label="Option" icon="md-settings">
             </ons-tab>
         </ons-tabbar>
     </ons-page>
@@ -44,5 +45,7 @@
 <!-- import library  -->
 <script src="/assets/js/onsenui.min.js"></script>
 <script src="/assets/lib/jquery-3.5.1.min.js"></script>
+
+<!-- import js -->
 
 </html>
