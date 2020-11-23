@@ -9,3 +9,10 @@
     background-color: #FFC149;
     box-shadow: none;
 }
+
+ons-toolbar .center{
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+    background-color: #FFC149;
+}
