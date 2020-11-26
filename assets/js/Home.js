@@ -9,3 +9,10 @@ document.addEventListener('init', function (event) {
 
     }
 });
+ function goShop(){
+    document.querySelector("#Navigator_home").pushPage("views/Home/Shop.html");
+ }
+
+ function goBackHome(){
+    document.querySelector("#Navigator_home").popPage();
+ }

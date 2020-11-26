@@ -1,0 +1,28 @@
+ons-carousel[fullscreen] {
+    height: 27%;
+}
+
+.btnh{
+    color: black;
+    box-shadow: 5px 5px 6px 0 #64646480;
+    background-color: white ;
+    border-color: white;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0 0.2rem 0;
+    border-radius: 10px;
+    width: 90%;
+    height: 35px;
+}
+
+.containerH{
+    border-radius: 10px;
+    /* border: dashed; */
+    height: fit-content;
+    background-color: gainsboro;
+    margin-bottom: 10px;
+}
+
+.containerH div{
+    font-size: 14px;
+    margin-left: 0.5rem;
+}
