@@ -1,0 +1,17 @@
+.titlebar{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 1rem;
+}
+.button-outline{
+    background-color:transparent;
+    border:1px solid #030303;
+    color:#000000;
+    padding: 8px;
+    font-size: 14px;
+    display: inline-block;
+}
+.button-outline:active{
+    background-color:#b3d6ff;
+    border:1px solid #0076ff;
+    color:#0076ff;opacity:1}
