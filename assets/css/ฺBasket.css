@@ -11,7 +11,24 @@
     font-size: 14px;
     display: inline-block;
 }
-.button-outline:active{
-    background-color:#b3d6ff;
-    border:1px solid #0076ff;
-    color:#0076ff;opacity:1}
+.delete-button{
+    padding-left: 9rem;
+    /* padding-top: 0.275rem;
+    padding-bottom: 0.275rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem; 
+    margin-right: 0.5rem; */
+    color: rgb(253, 5, 5);
+    font-size: 12px;
+}
+.title-basket{
+    color: rgb(8, 8, 8);
+    font-size: 12px;
+}
+.basket-price{
+    color: rgb(8, 8, 8);
+    font-size: 14px;
+}
+.delete-button{
+    
+}
