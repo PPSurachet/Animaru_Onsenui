@@ -9,10 +9,20 @@ document.addEventListener('init', function (event) {
 
     }
 });
+
  function goShop(){
     document.querySelector("#Navigator_home").pushPage("views/Home/Shop.html");
  }
 
  function goBackHome(){
-    document.querySelector("#Navigator_home").popPage();
+      document.querySelector("#Navigator_home").popPage();
  }
+
+ function goSelect(){
+   document.querySelector("#Navigator_home").pushPage("views/Home/Select.html");
+}
+
+function goSelectformShop(){
+   document.querySelector("#Navigator_Shop").pushPage("views/Home/Select.html");
+
+}
