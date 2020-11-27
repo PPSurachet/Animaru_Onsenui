@@ -1,3 +1,7 @@
+*{
+    font-family: 'Kanit';
+}
+
 ons-carousel[fullscreen] {
     height: 27%;
 }
@@ -91,4 +95,19 @@ ons-carousel[fullscreen] {
     margin-left: 15px;
     margin-right: 10px;
     margin-bottom: 15px;
+}
+
+.editbtnSelect{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btnSelect{
+    color: white;
+    padding: 15px 2px 15px 2px;
+    border-radius: 5px;
+    border:5px solid #ffd000;
+    background-color: rgb(219, 160, 31);
+    width: 70%;
 }
