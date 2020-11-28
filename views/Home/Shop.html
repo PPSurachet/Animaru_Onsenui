@@ -2,7 +2,94 @@
     <ons-navigator swipeable id="Navigator_Shop" page="Shop.html"></ons-navigator>
     <template id="Shop.html">
         <ons-page id="ShopPage">
-            <div class="h3">This is ShopPage</div>
+            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" onclick="goBackHome()">
+                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+            </ons-fab>
+            <div class="Shopprofile">
+                <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
+                    <ons-col class="col-5 pixprofile">
+                        <img src="/assets/image/image 5.png" width="100%" style="border-radius: 100%;
+                        border: 5px solid white;">
+                    </ons-col>
+                    <ons-col class="col-7 text">
+                        <div>Store name: Animaru_welcome</div>
+                            <ons-row class="d-flex justify-content-around container1">
+                                <ons-col class="col-3 editH">
+                                    หมา
+                                </ons-col>
+                                    <ons-col class="col-3 editH">
+                                        แมว
+                                    </ons-col>
+                                    <ons-col class="col-3 editH">
+                                        หนู
+                                    </ons-col>
+                                </ons-row>
+                        <div>คะแนนร้านค้า : 100</div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" item-width="33%"
+                style="height: 9%;padding-left: 15px;">
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">มาแรง</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">มาใหม่</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnhSH">พิเศษ</button>
+                </ons-carousel-item>
+            </ons-carousel>
+            <ons-row class="d-flex justify-content-around pl-1 pr-1">
+                <ons-col class="col-6 p-1"  onclick="goSelectformShop()">
+                    <div class="containerH">
+                        <img src="/assets/image/Dog.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+                <ons-col class="col-6 p-1">
+                    <div class="containerH">
+                        <img src="/assets/image/Cat.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+                <ons-col class="col-6 p-1">
+                    <div class="containerH">
+                        <img src="/assets/image/Rat.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+                <ons-col class="col-6 p-1">
+                    <div class="containerH">
+                        <img src="/assets/image/Fish.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+                <ons-col class="col-6 p-1">
+                    <div class="containerH">
+                        <img src="/assets/image/Rat.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+                <ons-col class="col-6 p-1">
+                    <div class="containerH">
+                        <img src="/assets/image/Fish.png" width="100%">
+                        <div>Breed : Syberian Husky</div>
+                        <div>Breeder : Freepik</div>
+                        <div>Bark : Yes</div>
+                    </div>
+                </ons-col>
+            </ons-row>
         </ons-page>
     </template>
 </ons-page>
