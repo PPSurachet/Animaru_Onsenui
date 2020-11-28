@@ -1,0 +1,19 @@
+.center {
+  text-align: center;
+}
+body {
+  background-color: #e7ae3f;
+}
+a {
+  color: #dc3545;
+}
+
+.btn-primary {
+  background-color: #ce9a35;
+  border-color: #ce9a35;
+}
+.input {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 15px;
+}

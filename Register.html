@@ -4,25 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animaru</title>
+    <title>Animaru Register</title>
 
     <!-- import onsen ui css -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/onsenui.css">
     <link rel="stylesheet" href="/assets/css/onsen-css-components.min.css">
 
     <!-- import css  -->
+
     <link rel="stylesheet" href="/assets/css/genaral.css">
     <link rel="stylesheet" href="/assets/css/Login.css">
 </head>
 
 <body>
-    <ons-page>
-        <ons-toolbar>
-            <div class="center">
-                A N I M A R U
+    <div class="container" style="padding-right: 30px" ;>
+        <div class=" display2 text-center">
+            <div class="text-center">
+                <img src="/assets/image/Group 192.png" style="width:60%;padding-bottom: 30px;padding-top: 30px;">
+                <img src="/assets/image/Group 237.png" style="padding-bottom: 10px;">
+                <h1>REGISTER</h1>
             </div>
-        </ons-toolbar>
-    </ons-page>
+        </div>
+        <div class="container text-center">
+            <input type="email" class="form-control input" placeholder="Username" name="" id="email" placeholder="">
+            <small id="emaillHelpid" class="from-text"></small>
+            <div class="form-group ">
+
+                <input type="password" class=" form-control input" placeholder="Password" name="" id="password"
+                    placeholder="">
+                <input type="password" class=" form-control input" placeholder="Password" name="" id="password"
+                    placeholder="">
+                <input type="password" class=" form-control input" placeholder="Password" name="" id="password"
+                    placeholder="">
+            </div>
+
+            <br>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" id="signinemail"
+                    style="border-radius: 40px;padding-top: 10px;padding-bottom: 10px;padding-left: 30px;padding-right: 30px;">Register</button>
+                </p>
+            </div>
+        </div>
+
+
 </body>
 
 <!-- import firebase -->
