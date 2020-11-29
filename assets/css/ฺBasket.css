@@ -30,6 +30,8 @@
     font-size: 14px;
 }
 .headderfont {
+    padding-top: 12px;
+    padding-bottom: 12px;
     font-weight: bold;
     font-size: 32px;
     color: rgb(252, 186, 3);
@@ -38,4 +40,15 @@
 .headderpaddingTop {
     padding-top: 1px;
     text-align: center;
+}
+/* .headderpageprofile {
+    font-weight: bold;
+    font-size: 24px;
+    color: #33ccff;
+} */
+ons-toolbar .ordercenter{
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(252, 186, 3);
+   
 }
