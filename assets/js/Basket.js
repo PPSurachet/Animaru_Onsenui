@@ -8,3 +8,8 @@ document.addEventListener('init', function (event) {
     }
 
 });
+
+function confirmOrder(){
+    document.querySelector('#Navigator_basket').pushPage("views/Basket/Order.html")
+}
+function backtoBasketPage() {     document.querySelector('#Navigator_basket').popPage(); }
