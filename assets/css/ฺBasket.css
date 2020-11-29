@@ -29,6 +29,13 @@
     color: rgb(8, 8, 8);
     font-size: 14px;
 }
-.delete-button{
-    
+.headderfont {
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(252, 186, 3);
+    text-align: center;
+}
+.headderpaddingTop {
+    padding-top: 1px;
+    text-align: center;
 }
