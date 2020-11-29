@@ -111,5 +111,7 @@ ons-carousel[fullscreen] {
   width: 70%;
 }
 
-.ons-carouselSearch {
+.backgroudSearchbutton {
+  border: 5px solid#FFC149;
+  background-color: #ffc149;
 }
