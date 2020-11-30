@@ -17,3 +17,7 @@ function profilePage() {
 function backtoProfilePage() {
     document.querySelector('#Navigator_setting').popPage();
 }
+
+function storePage() {
+    document.querySelector('#Navigator_setting').pushPage("views/Setting/MyShop.html");
+}
