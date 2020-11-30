@@ -2,7 +2,89 @@
     <ons-navigator swipeable id="Navigator_setting" page="Setting.html"></ons-navigator>
     <template id="Setting.html">
         <ons-page id="SettingPage">
-            <div class="h3">This is SettingPage</div>
+            <ons-list class="Cairo">
+                <div id="" class="area-margin Profile">
+                    <ons-row>
+                        <img src="/assets/image/Deno.png" alt="" class="imgprofile">
+                        <div class="profileName">Albus Dumblepor</div>
+                    </ons-row>
+                </div>
+                <ons-list-item tappable id="editProfile" style="padding-top: 0.2rem;padding-bottom: 0.5rem;">
+                    <div class="center">
+                        <img style="width: 35px; margin-right: 0.7rem;"
+                            src="data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDU4IDU5IiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGlkPSJQYWdlLTEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PGcgaWQ9IjAzOC0tLU1hcmtldC1TdGFsbCIgZmlsbD0icmdiKDAsMCwwKSIgZmlsbC1ydWxlPSJub256ZXJvIj48cGF0aCBpZD0iU2hhcGUiIGQ9Im0xMSAxMmgxMmMwIDIuMjA5MTM5LTEuNzkwODYxIDQtNCA0aC00Yy0yLjIwOTEzOSAwLTQtMS43OTA4NjEtNC00eiIvPjxwYXRoIGlkPSJTaGFwZSIgZD0ibTIzIDEyaDEyYzAgMi4yMDkxMzktMS43OTA4NjEgNC00IDRoLTRjLTIuMjA5MTM5IDAtNC0xLjc5MDg2MS00LTR6Ii8+PHBhdGggaWQ9IlNoYXBlIiBkPSJtMzUgMTJoMTJjMCAyLjIwOTEzOS0xLjc5MDg2MSA0LTQgNGgtNGMtMi4yMDkxMzkgMC00LTEuNzkwODYxLTQtNHoiLz48cGF0aCBpZD0iU2hhcGUiIGQ9Im01OCAxMmMtLjAwMTg5NDIgMS4wNjA2NDI3LS40MjIzNjA4IDIuMDc3NjY4OS0xLjE3IDIuODMtLjUwODQ4MTguNTAwODMzLTEuMTM5NTAxOS44NTk0NDU2LTEuODMgMS4wNC0uMzI1NzMwNy4wODkzMDQxLS42NjIyNjI4LjEzMzA1MzMtMSAuMTNoLTNjLTIuMjA5MTM5IDAtNC0xLjc5MDg2MS00LTRoN2MuNTUyMjg0NyAwIDEtLjQ0NzcxNTMgMS0xcy0uNDQ3NzE1My0xLTEtMWgtNi4zMmwtMS43NS00LjM3Yy0uMTMyMTg4My0uMzMyMjU3MDItLjQzMTU5MjMtLjU2ODc1MzU2LS43ODU0Mjk0LS42MjA0MDM2N3MtLjcwODM1MTIuMDg5MzkzMS0uOTMuMzcwMDAwMDFjLS4yMjE2NDg5LjI4MDYwNjkxLS4yNzY3NTg5LjY1ODE0NjY2LS4xNDQ1NzA2Ljk5MDQwMzY2bDEuNDUgMy42M2gtOS41MnYtMmMwLS41NTIyODQ3NS0uNDQ3NzE1My0xLTEtMXMtMSAuNDQ3NzE1MjUtMSAxdjJoLTEwdi0yYzAtLjU1MjI4NDc1LS40NDc3MTUzLTEtMS0xcy0xIC40NDc3MTUyNS0xIDF2MmgtOS41MmwxLjQ1LTMuNjNjLjIwNDM0NTQtLjUxMzYyNDgyLS4wNDYzNzUyLTEuMDk1NjU0NjQtLjU2LTEuM3MtMS4wOTU2NTQ2LjA0NjM3NTE4LTEuMy41NmwtMS43NSA0LjM3aC02LjMyYy0uNTUyMjg0NzUgMC0xIC40NDc3MTUzLTEgMXMuNDQ3NzE1MjUgMSAxIDFoN2MwIDIuMjA5MTM5LTEuNzkwODYxIDQtNCA0aC0zYy0uMzM3NzM3MjEuMDAzMDUzMy0uNjc0MjY5MjUtLjA0MDY5NTktMS0uMTMtLjY5MDQ5ODA2LS4xODA1NTQ0LTEuMzIxNTE4MjMtLjUzOTE2Ny0xLjgzLTEuMDQtLjc0NzYzOTE1LS43NTIzMzExLTEuMTY4MTA1ODItMS43NjkzNTczLTEuMTctMi44My4wMDE3MzY0MS0uNjUyMTUxMS4xODkwMzEyOS0xLjI5MDM0MS41NC0xLjg0bDQuOTktNy44NGMuOTExNzAwMTYtMS40NDUxMDkyNiAyLjUwMTMzNDgxLTIuMzIxMTA3NDYgNC4yMS0yLjMyaDM4LjUyYzEuNzA4NjY1Mi0uMDAxMTA3NDYgMy4yOTgyOTk4Ljg3NDg5MDc0IDQuMjEgMi4zMmw0Ljk5IDcuODRjLjM1MDk2ODcuNTQ5NjU5LjUzODI2MzYgMS4xODc4NDg5LjU0IDEuODR6Ii8+PHJlY3QgaWQ9IlJlY3RhbmdsZS1wYXRoIiBoZWlnaHQ9IjQiIHJ4PSIyIiB3aWR0aD0iNTgiIHk9IjM4Ii8+PHJlY3QgaWQ9IlJlY3RhbmdsZS1wYXRoIiBoZWlnaHQ9IjkiIHJ4PSIuNSIgd2lkdGg9IjU0IiB4PSIyIiB5PSI0NCIvPjxwYXRoIGlkPSJTaGFwZSIgZD0ibTcgMTh2MTcuNWMwIC4yNzYxNDI0LS4yMjM4NTc2My41LS41LjVoLTNjLS4yNzYxNDIzNyAwLS41LS4yMjM4NTc2LS41LS41di0xNy41OGMuMzMwNzQxMjYuMDUyNjY4Ni42NjUwOTE5Mi4wNzk0MTY3IDEgLjA4eiIvPjxwYXRoIGlkPSJTaGFwZSIgZD0ibTU1IDE3LjkydjE3LjU4YzAgLjI3NjE0MjQtLjIyMzg1NzYuNS0uNS41aC0zYy0uMjc2MTQyNCAwLS41LS4yMjM4NTc2LS41LS41di0xNy41aDNjLjMzNDk0MS4wMDAyMzY0LjY2OTM1NjUtLjAyNjUxNjkgMS0uMDh6Ii8+PHBhdGggaWQ9IlNoYXBlIiBkPSJtMTIgMzBoMThjLjU1MjI4NDcgMCAxIC40NDc3MTUzIDEgMXY0LjVjMCAuMjc2MTQyNC0uMjIzODU3Ni41LS41LjVoLTE5Yy0uMjc2MTQyNCAwLS41LS4yMjM4NTc2LS41LS41di00LjVjMC0uNTUyMjg0Ny40NDc3MTUzLTEgMS0xeiIvPjxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgaGVpZ2h0PSI0IiByeD0iMSIgd2lkdGg9IjEwIiB4PSIxMSIgeT0iMjAiLz48cmVjdCBpZD0iUmVjdGFuZ2xlLXBhdGgiIGhlaWdodD0iNCIgcng9Ii41IiB3aWR0aD0iNCIgeD0iMTQiIHk9IjI1Ii8+PHBhdGggaWQ9IlNoYXBlIiBkPSJtNDAgMjggLjk0NSA3LjU2MmMuMDMxNDQ0NC4yNTE2ODgxLjI0NjM2MjguNDM5OTU2Ni41LjQzOGgzLjExOGMuMjUzNjM3Mi4wMDE5NTY2LjQ2ODU1NTYtLjE4NjMxMTkuNS0uNDM4bC45MzctNy41NjJ6Ii8+PHJlY3QgaWQ9IlJlY3RhbmdsZS1wYXRoIiBoZWlnaHQ9IjQiIHJ4PSIyIiB3aWR0aD0iNTgiIHk9IjU1Ii8+PC9nPjwvZz48L3N2Zz4=" />
+                        Your Store
+                    </div>
+                    <div class="right">
+                        <div style="opacity: 0.5;">Go!</div>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <b class="header">Account Setting</b>
+                </ons-list-item>
+
+                <ons-list-item tappable id="editProfile" onclick="profilePage()">
+                    <div class="center">
+                        Edit profile
+                    </div>
+                    <div class="right">
+                        <ons-icon size="40px" icon="md-chevron-right"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item tappable id="ChangePassword">
+                    <div class="center">
+                        Change password
+                    </div>
+                    <div class="right">
+                        <ons-icon size="40px" icon="md-chevron-right"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <div class="center">
+                        Add a payment method
+                    </div>
+                    <div class="right">
+                        <ons-icon size="20px" icon="fa-plus"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="center">
+                        Dark mode
+                    </div>
+                    <div class="right">
+                        <ons-switch id="my-switch"></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <div class="">
+                        Auto update
+                    </div>
+                    <div class="right">
+                        <ons-switch></ons-switch>
+                    </div>
+                </ons-list-item>
+                <ons-list-item>
+                    <b class="header">More</b>
+                </ons-list-item>
+                <ons-list-item tappable>About us</ons-list-item>
+                <ons-list-item tappable>
+                    <div class="center">
+                        Privacy policy
+                    </div>
+                    <div class="right">
+                        <ons-icon size="40px" icon="md-chevron-right"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item tappable>
+                    <div class="center">
+                        Report
+                    </div>
+                    <div class="right">
+                        <ons-icon size="40px" icon="md-chevron-right"></ons-icon>
+                    </div>
+                </ons-list-item>
+                <ons-list-item tappable id="signOut">Sign out</ons-list-item>
+            </ons-list>
         </ons-page>
     </template>
 </ons-page>

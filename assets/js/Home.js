@@ -21,12 +21,12 @@ const getRecommededPets = () => {
          const result =
             /*html*/
             `<ons-col class="col-6 p-1 clickAnimal">
-          <div class="containerH" id="${doc.data().Breed}">
-              <img src="${doc.data().photoURL}" width="100%">
-              <div>Breed : ${doc.data().Breed}</div>
-              <div>Breeder : ${doc.data().Breeder}</div>
-              <div>Price : ${doc.data().Price}</div>
-          </div>
+         <div class="containerH" id="${doc.data().Breed}">
+            <img src="${doc.data().photoURL}" width="100%">
+            <div>Breed : ${doc.data().Breed}</div>
+            <div>Breeder : ${doc.data().Breeder}</div>
+            <div>Price : ${doc.data().Price}</div>
+         </div>
       </ons-col>`
          $("#showItemRecomended").append(result);
       });
@@ -111,26 +111,26 @@ const selectShop = (Shop, Navigator) => {
          if (Shop == doc.data().Name) {
             const result = /*html*/
                `
-            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="BackSelect">
-                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
-            </ons-fab>
-            <div class="Shopprofile">
-                <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
-                    <ons-col class="col-5 pixprofile">
-                        <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
-                        border: 5px solid white;">
-                    </ons-col>
-                    <ons-col class="col-7 text">
-                        <div>${doc.data().Name}</div>
-                        <ons-row class="d-flex justify-content-start container1">
-                            <ons-col class="col-4 editH">
-                              ${doc.data().Type}
-                            </ons-col>
-                        </ons-row>
-                        <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
-                    </ons-col>
-                </ons-row>
-            </div>
+         <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="BackSelect">
+               <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+         </ons-fab>
+         <div class="Shopprofile">
+               <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
+                  <ons-col class="col-5 pixprofile">
+                     <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+                     border: 5px solid white;">
+                  </ons-col>
+                  <ons-col class="col-7 text">
+                     <div>${doc.data().Name}</div>
+                     <ons-row class="d-flex justify-content-start container1">
+                           <ons-col class="col-4 editH">
+                           ${doc.data().Type}
+                           </ons-col>
+                     </ons-row>
+                     <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
+                  </ons-col>
+               </ons-row>
+         </div>
             `
             $('#showSelectShop').append(result);
          }
@@ -148,27 +148,27 @@ const clickShop = (Name, Navigator) => {
          if (Name == doc.data().Name) {
             const result = /*html*/
                `
-            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back">
-                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
-            </ons-fab>
-            <div class="Shopprofile">
-                <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
-                    <ons-col class="col-5 pixprofile">
-                        <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
-                        border: 5px solid white;">
-                    </ons-col>
-                    <ons-col class="col-7 text">
-                        <div>${doc.data().Name}</div>
-                        <ons-row class="d-flex justify-content-start container1">
-                            <ons-col class="col-4 editH">
-                              ${doc.data().Type}
-                            </ons-col>
-                        </ons-row>
-                        <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
-                    </ons-col>
-                </ons-row>
-            </div>
-            `
+         <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back">
+               <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+         </ons-fab>
+         <div class="Shopprofile">
+               <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
+                  <ons-col class="col-5 pixprofile">
+                     <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+                     border: 5px solid white;">
+                  </ons-col>
+                  <ons-col class="col-7 text">
+                     <div>${doc.data().Name}</div>
+                     <ons-row class="d-flex justify-content-start container1">
+                           <ons-col class="col-4 editH">
+                           ${doc.data().Type}
+                           </ons-col>
+                     </ons-row>
+                     <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
+                  </ons-col>
+               </ons-row>
+         </div>
+         `
             showPetShop(doc.data().Name);
             $('#showShop').append(result);
          }
@@ -186,13 +186,13 @@ const showPetShop = (Breeder) => {
             const result =
                /*html*/
                `<ons-col class="col-6 p-1">
-             <div class="containerH ClickSelectInShop" id="${doc.data().Breed}">
-                 <img src="${doc.data().photoURL}" width="100%">
-                 <div>Breed : ${doc.data().Breed}</div>
-                 <div>Breeder : ${doc.data().Breeder}</div>
-                 <div>Price : ${doc.data().Price}</div>
-             </div>
-         </ons-col>`
+                  <div class="containerH ClickSelectInShop" id="${doc.data().Breed}">
+                     <img src="${doc.data().photoURL}" width="100%">
+                     <div>Breed : ${doc.data().Breed}</div>
+                     <div>Breeder : ${doc.data().Breeder}</div>
+                     <div>Price : ${doc.data().Price}</div>
+                  </div>
+               </ons-col>`
             $("#showPetinShop").append(result);
          }
       });
@@ -211,7 +211,7 @@ const clickCategory = () => {
       if (Category == "แนะนำ") {
          getRecommededPets();
          shopProfileShop();
-      }else{
+      } else {
          getPetsCategory(Category);
          getShopCategory(Category);
       }
@@ -220,11 +220,11 @@ const clickCategory = () => {
 
 const getPetsCategory = (Category) => {
    $("#showItemRecomended").empty();
-   db.collection("Pets").where("Type","==",Category).get().then(function (querySnapshot) {
+   db.collection("Pets").where("Type", "==", Category).get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
          const result =
             /*html*/
-         `
+            `
          <ons-col class="col-6 p-1 clickAnimal">
             <div class="containerH" id="${doc.data().Breed}">
                <img src="${doc.data().photoURL}" width="100%">
@@ -246,7 +246,7 @@ const getPetsCategory = (Category) => {
 
 const getShopCategory = (Category) => {
    $("#showShopProfile").empty();
-   db.collection("Shops").where("Type","==",Category).get().then(function (querySnapshot) {
+   db.collection("Shops").where("Type", "==", Category).get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
          const result =
             /*html*/
