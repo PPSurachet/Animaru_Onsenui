@@ -1,0 +1,117 @@
+* {
+  font-family: "Kanit";
+}
+
+ons-carousel[fullscreen] {
+  height: 27%;
+}
+
+.btnh {
+  color: black;
+  box-shadow: 5px 5px 6px 0 #64646480;
+  background-color: white;
+  border-color: white;
+  margin-top: 0.5rem;
+  padding: 0.2rem 0 0.2rem 0;
+  border-radius: 10px;
+  width: 90%;
+  height: 35px;
+}
+
+.btnhSH {
+  color: gold;
+  box-shadow: 5px 5px 6px 0 #64646480;
+  background-color: hsl(300, 100%, 28%);
+  border-color: hsl(300, 100%, 28%);
+  margin-top: 0.5rem;
+  padding: 0.2rem 0 0.2rem 0;
+  border-radius: 10px;
+  width: 90%;
+  height: 35px;
+}
+
+.containerH {
+  border-radius: 10px;
+  /* border: dashed; */
+  height: fit-content;
+  background-color: gainsboro;
+  margin-bottom: 10px;
+}
+
+.containerH div {
+  font-size: 14px;
+  margin-left: 0.5rem;
+}
+
+.textprofile {
+  background-color: #1d1d1d;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: auto;
+  width: 95%;
+  border: dashed;
+  padding: 3%;
+  height: fit-content;
+  margin-bottom: 10px;
+}
+.text {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.text div {
+  color: white;
+}
+
+.editH {
+  text-align: center;
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.container1 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.Shopprofile {
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.slideShow {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.textSelect {
+  padding: 10px 10px 10px 10px;
+  background-color: white;
+  margin-top: 15px;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.editbtnSelect {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btnSelect {
+  color: white;
+  padding: 15px 2px 15px 2px;
+  border-radius: 5px;
+  border: 5px solid #ffd000;
+  background-color: rgb(219, 160, 31);
+  width: 70%;
+}
+
+.backgroudSearchbutton {
+  border: 5px solid#FFC149;
+  background-color: #ffc149;
+}
