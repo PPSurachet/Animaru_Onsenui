@@ -166,5 +166,32 @@ ons-list-item{
 }
 .title-username{
     margin-left: 4rem;
-    font-size: 23px;
+    font-size: 22px;
+}
+
+.confirmEditBtn{
+    color: white;
+    padding: 10px 2px 10px 2px;
+    border-radius: 5px;
+    border:5px solid #ffd000;
+    background-color: rgb(219, 160, 31);
+    width: 50%;
+}
+
+.addBtn{
+    color: black;
+    box-shadow: 5px 5px 6px 0 #64646480;
+    background-color: white ;
+    border-color: white;
+    margin-top: 0.5rem;
+    padding: 0.2rem 0 0.2rem 0;
+    border-radius: 10px;
+    width: 90%;
+    height: 35px;
+}
+.addAnimaru{
+    width: 388.875px;
+    margin-left: 0.7rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
 }

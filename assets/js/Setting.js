@@ -21,3 +21,4 @@ function backtoProfilePage() {
 function storePage() {
     document.querySelector('#Navigator_setting').pushPage("views/Setting/MyShop.html");
 }
+

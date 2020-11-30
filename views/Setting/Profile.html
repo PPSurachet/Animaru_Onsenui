@@ -2,9 +2,71 @@
     <ons-navigator swipeable id="Navigator_profile" page="profile.html"></ons-navigator>
     <template id="profile.html">
         <ons-page id="profilePage">
-            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back" onclick="backtoProfilePage()">
-                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
-            </ons-fab>
+            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back"
+                onclick="backtoProfilePage()">
+                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i></ons-fab>
+            <div id="editProfile">
+                <div class="text-center">
+                    <img src="assets/image/Deno.png" class="editImg" alt="" srcset="">
+                </div>
+                <div class="profileList">
+                    <div class="title-username">
+                        ID
+                    </div>
+                    <ons-row class="row align-items-center" style="padding-top: 0.5rem;padding-bottom: 0.3rem;">
+                        <div class="col-2"></div>
+                        <div class="col-9"><input type="text" class="form-control" id="username"
+                                value="Albus Dumblepor">
+                        </div>
+                        <div class="right icon-pencil">
+                            <ons-icon size="30px" icon="md-edit"></ons-icon>
+                        </div>
+                    </ons-row>
+                </div>
+                <div class="profileList">
+                    <div class="title-username">
+                        Email
+                    </div>
+                    <ons-row class="row align-items-center" style="padding-top: 0.5rem;padding-bottom: 0.3rem;">
+                        <div class="col-2"></div>
+                        <div class="col-9"><input type="text" class="form-control" id="emailID"
+                                value="a.Dpor@kmail.com">
+                        </div>
+                    </ons-row>
+                </div>
+                <div class="profileList">
+                    <div class="title-username">
+                        Gender
+                    </div>
+                    <ons-row class="row align-items-center" style="padding-top: 0.5rem;padding-bottom: 0.3rem;">
+                        <div class="col-2"></div>
+                        <div class="col-9"><input type="text" class="form-control" id="genderID"
+                                value="Male">
+                        </div>
+                        <div class="right icon-pencil">
+                            <ons-icon size="30px" icon="md-edit"></ons-icon>
+                        </div>
+                    </ons-row>
+                </div>
+                <div class="profileList">
+                    <div class="title-username">
+                        DOB
+                    </div>
+                    <ons-row class="row align-items-center" style="padding-top: 0.5rem;padding-bottom: 0.3rem;">
+                        <div class="col-2"></div>
+                        <div class="col-9"><input type="text" class="form-control" id="DOBID"
+                                value="30/02/1999">
+                        </div>
+                        <div class="right icon-pencil">
+                            <ons-icon size="30px" icon="md-edit"></ons-icon>
+                        </div>
+                    </ons-row>
+                </div>
+                <div class="editbtnSelect">
+                    <input type="button" class="confirmEditBtn" value="Confirm">
+                </div>
+            </div>
+
         </ons-page>
     </template>
 </ons-page>
