@@ -16,3 +16,6 @@ function backtoBasketPage() {     document.querySelector('#Navigator_basket').po
 function paymentButton(){
     document.querySelector('#Navigator_basket').pushPage("views/Basket/Payment.html")
 }
+function buttonFinish() {
+    alert("ชำระเงินเสนร็จสิ้น");
+  }

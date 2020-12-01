@@ -96,7 +96,7 @@ ons-toolbar .ordercenter{
      border-color:  rgb(252, 186, 3);
  }
  .scanQRCode{
-    padding-top: 3px;
+    padding-top: 10px;
     font-weight: bold;
     font-size: 28px;
     color: rgb(129, 129, 129);
