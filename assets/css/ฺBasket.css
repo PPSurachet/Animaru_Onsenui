@@ -52,18 +52,25 @@ ons-toolbar .ordercenter{
     color: rgb(252, 186, 3);
    
 }
-headderOrder{
+.headderOrder{
     font-size: 48px;
 }
-titileOrder{
 
+.address1-order{
+    font-size: 22px; 
+    font-weight: bold;
+    color: rgb(252, 186, 3);
 }
-p .address-order{
-    font-size: 20px; 
+.address2-order{
+    font-size: 18px; 
 }
-p .address-order{
-    font-size: 20px; 
-}
-p .delivery-order{
+.delivery-order{
     font-size: 18px;
+    color: gray;
+}
+.marketAddress{
+    padding: 10px;
+    font-size: 18px; 
+    font-weight: bold;
+    color: rgb(252, 186, 3);
 }
