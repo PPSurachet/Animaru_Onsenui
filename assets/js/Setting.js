@@ -1,8 +1,7 @@
 document.addEventListener('init', function (event) {
     var page = event.target;
-
     if (page.id === 'SettingPage') {
-        
+        SignOut();
     } else if (page.id === 'myShopPage') {
 
     } else if (page.id === 'profilePage') {
@@ -10,22 +9,12 @@ document.addEventListener('init', function (event) {
     }
 });
 
-function profilePage() {
-    document.querySelector('#Navigator_setting').pushPage("views/Setting/Profile.html");
-}
-
-function backtoProfilePage() {
-    document.querySelector('#Navigator_setting').popPage();
-}
-
-function storePage() {
-    document.querySelector('#Navigator_setting').pushPage("views/Setting/MyShop.html");
-}
-
-function addAnimaruForm() {
-    document.querySelector('#Navigator_setting').pushPage("views/Setting/addanimalform.html")
-}
-
-function backtoMyStore(){
-    document.querySelector('#Navigator_setting').popPage();
+const SignOut = () => {
+    $("#signOut").click(function () {
+        firebase.auth().signOut().then(function () {
+            window.location.href = "login.html"
+        }).catch(function (error) {
+            // An error happened.
+        });
+    })
 }

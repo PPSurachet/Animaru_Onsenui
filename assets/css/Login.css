@@ -1,0 +1,78 @@
+.center {
+  text-align: center;
+}
+body {
+  background-color: #e7ae3f;
+}
+a {
+  color: #dc3545;
+}
+
+.btn-primary {
+  background-color: #ce9a35;
+  border-color: #ce9a35;
+}
+.input {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 15px;}
+  .input1{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-radius: 15px;
+    color : #B2B2B2;
+    
+  }
+.divcon{padding-right: 30px"
+}
+.img1{ 
+  width:60%;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.img2{ 
+    padding-bottom: 30px;
+}
+
+.SinginRegis{
+  padding-bottom:80px;
+  padding-top: 50px;
+}
+
+.buttonsingin{
+  border-radius: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.buttonGoogle{
+    width:210px;
+    padding-top: 0%;
+    padding-bottom: 0%; 
+    padding-left: 0%; 
+    padding-right: 0%;
+}
+
+.imggoogle{
+  width:210px
+}
+
+.register{
+  margin-left: 15px;
+  font-family: 'Open Sans', sans-serif;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+input,
+input::-webkit-input-placeholder {
+  font-size: 20px;
+  line-height: 3;
+}
+
+.FFFFFF{
+color: #ffffff;
+font-family: 'Open Sans', sans-serif;
+}

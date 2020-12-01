@@ -4,31 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animaru</title>
+    <title>Animaru Register</title>
 
     <!-- import onsen ui css -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/onsenui.css">
     <link rel="stylesheet" href="/assets/css/onsen-css-components.min.css">
 
     <!-- import css  -->
     <link rel="stylesheet" href="/assets/css/genaral.css">
     <link rel="stylesheet" href="/assets/css/Login.css">
+
+    <!-- import font icon  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
-    <ons-page>
-        <ons-toolbar>
-            <div class="center">
-                A N I M A R U
+    <ong-page>
+        <div class="container divcon">
+            <div class="container text-center">
+                <a href="Login.html">
+                    <ons-fab position="top left" style="color: black; background-color: white;">
+                        <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+                    </ons-fab>
+                </a>
+                <h1 class="FFFFFF SinginRegis font-weight-bold">
+                    SIGN UP
+                </h1>
+                <div class="form-group ">
+                    <input type="email" class="form-control input" placeholder="Email" name="email" id="email">
+                </div>
+                <div class="form-group ">
+                    <input type="password" class=" form-control input" placeholder="Username" name="username"
+                        id="username">
+                </div>
+                <div class="form-group ">
+                    <input type="password" class=" form-control input" placeholder="Password" name="password"
+                        id="password">
+                </div>
+
+
+                <br>
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary buttonsingin mb-4 font-weight-bold" id="signinemail">
+                        SING IN
+                    </button>
+                </div>
+                <div class=" display2 text-center">
+                    <div class="text-center">
+                        <img src="/assets/image/Group 319.png" class="img2">
+                    </div>
+                </div>
             </div>
-        </ons-toolbar>
-    </ons-page>
+    </ong-page>
+
 </body>
 
 <!-- import firebase -->
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
 <script src="/assets/Firebase/Firebase.js"></script>
 
 <!-- import library  -->
@@ -37,5 +75,6 @@
 
 <!-- import js -->
 <script src="/assets/js/Login.js"></script>
+
 
 </html>
