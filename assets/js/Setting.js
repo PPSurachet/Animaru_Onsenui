@@ -22,3 +22,11 @@ function storePage() {
     document.querySelector('#Navigator_setting').pushPage("views/Setting/MyShop.html");
 }
 
+function addAnimaruForm() {
+    document.querySelector('#Navigator_setting').pushPage("views/Setting/addanimalform.html")
+    
+}
+
+function backtoMyStore(){
+    document.querySelector('#Navigator_setting').popPage();
+}
