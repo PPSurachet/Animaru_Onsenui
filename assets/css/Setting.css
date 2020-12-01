@@ -270,3 +270,10 @@ ons-list-item{
     color: white;
     margin-top: 0.5rem;
 }
+
+.editBtn{
+    background-color:#FFC149;
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 14px;
+}
