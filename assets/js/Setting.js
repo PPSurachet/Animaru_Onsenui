@@ -1,6 +1,5 @@
 document.addEventListener('init', function (event) {
     var page = event.target;
-
     if (page.id === 'SettingPage') {
         SignOut();
     } else if (page.id === 'myShopPage') {
