@@ -1,5 +1,3 @@
-const db = firebase.firestore();
-
 document.addEventListener('init', function (event) {
    var page = event.target;
 
@@ -68,19 +66,18 @@ const shopProfileShop = () => {
       $(".clickShop").click(function () {
          const Name = $(this).attr('id');
          const Navigator = "#Navigator_home";
-         clickShop(Name, Navigator)
+         clickShop(Name, Navigator, "Home")
          document.querySelector("#Navigator_home").pushPage("views/Home/Shop.html");
       })
    });
 };
 
 const selectAnimal = (Breed, Navigator) => {
-   db.collection("Pets").get().then(function (querySnapshot) {
+   db.collection("Pets").where("Breed", "==", Breed).get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
-         if (Breed == doc.data().Breed) {
-            var Shop = doc.data().Breeder
-            const result = /*html*/
-               `
+         var Shop = doc.data().Breeder
+         const result = /*html*/
+            `
             <div class="containerSelect text-center" style="background-color:white; margin:0.70rem;">
                <img src="${doc.data().photoURL}" width="60%" height="200px">
             </div>
@@ -95,22 +92,20 @@ const selectAnimal = (Breed, Navigator) => {
                <div><b>Description</b> : ${doc.data().Description} </div>
             </div>
             <div class="editbtnSelect">
-               <button type="button" class="btnSelect">ให้บ้าน</button>
+               <button type="button" class="btnSelect" onclick="AddBasketHome()">ให้บ้าน</button>
             </div>
             `
-            selectShop(Shop, Navigator);
-            $('#showSelectAnimal').append(result);
-         }
+         selectShop(Shop, Navigator);
+         $("#showSelectAnimal").append(result)
       });
    });
 };
 
 const selectShop = (Shop, Navigator) => {
-   db.collection("Shops").get().then(function (querySnapshot) {
+   db.collection("Shops").where("Name", "==", Shop).get().then(function (querySnapshot) {
       querySnapshot.forEach(function (doc) {
-         if (Shop == doc.data().Name) {
-            const result = /*html*/
-               `
+         const result = /*html*/
+            `
          <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="BackSelect">
                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
          </ons-fab>
@@ -132,8 +127,7 @@ const selectShop = (Shop, Navigator) => {
                </ons-row>
          </div>
             `
-            $('#showSelectShop').append(result);
-         }
+         $('#showSelectShop').append(result);
       });
 
       $("#BackSelect").click(function () {
@@ -153,8 +147,8 @@ const clickShop = (Name, Navigator) => {
          </ons-fab>
          <div class="Shopprofile">
                <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
-                  <ons-col class="col-5 pixprofile">
-                     <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+                  <ons-col class="col-5">
+                     <img src="${doc.data().PhotoURL}" class="pixprofile" style="border-radius: 100%;
                      border: 5px solid white;">
                   </ons-col>
                   <ons-col class="col-7 text">
@@ -216,7 +210,7 @@ const clickCategory = () => {
          getShopCategory(Category);
       }
    })
-}
+};
 
 const getPetsCategory = (Category) => {
    $("#showItemRecomended").empty();
@@ -277,3 +271,7 @@ const getShopCategory = (Category) => {
       })
    });
 };
+
+const AddBasketHome = () => {
+   ons.notification.alert('ให้บ้านสำเร็จ')
+}
