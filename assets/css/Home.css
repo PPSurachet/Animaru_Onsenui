@@ -111,3 +111,8 @@ ons-carousel[fullscreen] {
     background-color: rgb(219, 160, 31);
     width: 70%;
 }
+
+.pixprofile{
+    width: 100px;
+    height: 100px;
+}

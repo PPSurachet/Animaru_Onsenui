@@ -47,8 +47,8 @@ const shopProfileShop = () => {
          const result =
             /*html*/
             `<ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile clickShop" id="${doc.data().Name}">
-         <ons-col class="col-5 pixprofile">
-            <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+         <ons-col class="col-5">
+            <img src="${doc.data().PhotoURL}" class="pixprofile" style="border-radius: 100%;
             border: 5px solid white;">
          </ons-col>
          <ons-col class="col-7 text">
@@ -116,8 +116,8 @@ const selectShop = (Shop, Navigator) => {
          </ons-fab>
          <div class="Shopprofile">
                <ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile">
-                  <ons-col class="col-5 pixprofile">
-                     <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+                  <ons-col class="col-5">
+                     <img src="${doc.data().PhotoURL}" class="pixprofile" style="border-radius: 100%;
                      border: 5px solid white;">
                   </ons-col>
                   <ons-col class="col-7 text">
@@ -251,8 +251,8 @@ const getShopCategory = (Category) => {
          const result =
             /*html*/
             `<ons-row class="d-flex justify-content-around pl-1 pr-1 textprofile clickShop" id="${doc.data().Name}">
-         <ons-col class="col-5 pixprofile">
-            <img src="${doc.data().PhotoURL}" width="100%" style="border-radius: 100%;
+         <ons-col class="col-5">
+            <img src="${doc.data().PhotoURL}" class="pixprofile" style="border-radius: 100%;
             border: 5px solid white;">
          </ons-col>
          <ons-col class="col-7 text">
