@@ -9,7 +9,7 @@
             <div class="formTitle">Animal Detail</div>
             <ons-row class="row align-items-center addAnimalElement">
                 <div class="formCenter">
-                    <input type="text" placeholder="Breed/สายพันธุ์" class="form-control formSize" required>
+                    <input type="text" placeholder="Breed/สายพันธุ์" class="form-control formSize">
                 </div>
             </ons-row>
             <ons-row class="row align-items-center addAnimalElement">
@@ -24,14 +24,30 @@
             </ons-row>
             <ons-row class="row align-items-center addAnimalElement">
                 <div class="formCenter">
-                    <input type="text" placeholder="Age/อายุ" class="form-control formSize" required>
+                    <input type="text" placeholder="Sex/เพศ" class="form-control formSize">
                 </div>
             </ons-row>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Age/อายุ" class="form-control formSize">
+                </div>
+            </ons-row>
+            <ons-row class="row d-flex align-items-center">
+                <div class="myShopTitle2">
+                    Type
+                </div>
+            <ons-select id="animaruType" class="btn addAnimalElement3" onchange="editSelects(event)">
+                <option value="Dog" >Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Small animal">Small animal</option>
+                <option value="Water animal">Water animal</option>
+              </ons-select>
+            </ons-row>
             <ons-row class="row addAnimalElement2" style="margin-top: 10px;">
-                <div class="petDegree">
+                <div class="myShopTitle">
                     Pet Degree
                 </div>
-                  <div class="segment" style="width:200px; margin-top: 7px;margin-left: 5rem; text-align: right">
+                  <div class="segment" style="width:200px; margin-top: 7px;margin-left: 5rem;">
                     <div class="segment__item">
                       <input type="radio" class="segment__input" name="navi-segment-a" checked>
                       <div class="segment__button">Yes</div>

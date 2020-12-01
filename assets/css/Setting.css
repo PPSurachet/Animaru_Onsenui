@@ -221,8 +221,13 @@ ons-list-item{
     height: 50px;
 }
 
-.petDegree{
+.myShopTitle{
     margin-top: 0.5rem;
+    margin-left: 2.5rem;
+    font-size: 17px;
+}
+
+.myShopTitle2{
     margin-left: 2.5rem;
     font-size: 17px;
 }
@@ -234,6 +239,15 @@ ons-list-item{
 
 .addAnimalElement2{
     margin-top: 1.5rem;
+}
+
+.addAnimalElement3{
+    margin-top: 0.7rem;
+    margin-left: 11.2rem;
+    background-color: white;
+    border: solid black 1px;
+    border-radius: 3px;
+    
 }
 
 .confirmedBtn{
@@ -249,4 +263,10 @@ ons-list-item{
 .titleBG{
     background-color: #FFC149;
     height: 53.600px;
+}
+
+.deleteBtn{
+    background-color: #FF2C2C;
+    color: white;
+    margin-top: 0.5rem;
 }
