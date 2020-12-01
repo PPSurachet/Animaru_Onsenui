@@ -2,7 +2,17 @@
     <ons-navigator swipeable id="Navigator_payment" page="payment.html"></ons-navigator>
     <template id="payment.html">
         <ons-page id="paymentPage">
-            <div class="h3">This is paymentPage</div>
+            <ons-list-item>
+                <div class="toolbar__center headderfont">PAYMENT</div>
+            </ons-list-item>
+            <div class="scanQRCode">สแกนรหัา QR เพื่อชำระเงิน</div>
+            <div class="list-item__left">
+                <img class="toolbar__center" src="assets/image/qrcode.png" alt="Cute kitten" width="300">
+              </div>
+            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back"
+                onclick="backtoBasketPage()">
+                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+            </ons-fab>
         </ons-page>
     </template>
 </ons-page>

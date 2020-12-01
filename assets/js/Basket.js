@@ -13,3 +13,6 @@ function confirmOrder(){
     document.querySelector('#Navigator_basket').pushPage("views/Basket/Order.html")
 }
 function backtoBasketPage() {     document.querySelector('#Navigator_basket').popPage(); }
+function paymentButton(){
+    document.querySelector('#Navigator_basket').pushPage("views/Basket/Payment.html")
+}

@@ -12,7 +12,7 @@
             <ul class="list">
                 <ons-list-item>
                     <div class="titlebar">ร้านค้า ANIMARU
-                        <button class="btn btn-primary btn-xs">ดูหน้าร้าน</button>
+                        <button class="btn button_color btn-xs">ดูหน้าร้าน</button>
                     </div>
                 </ons-list-item>
                 <ul class="list">
@@ -21,23 +21,23 @@
                             <img style="border:5px solid black;" src="assets/image/map.png" alt="Cute kitten"
                                 width="180" height="130">
                         </div>
-                            <div class="title-basket list-item__subtitle">
-                                <p class="address1-order">PSU phuket
-                                </p>
-                                <p class="address2-order">ADDRESS
-                                    <ons-icon size="20px" icon="md-edit"></ons-icon>
-                                </p>
-                                <p class="delivery-order">Delivery options
-                                    <ons-icon size="20px" icon="md-edit"></ons-icon>
-                                </p>
-                            </div>
+                        <div class="title-basket list-item__subtitle">
+                            <p class="address1-order">PSU phuket
+                            </p>
+                            <p class="address2-order">ADDRESS
+                                <ons-icon size="20px" icon="md-edit"></ons-icon>
+                            </p>
+                            <p class="delivery-order">Delivery options
+                                <ons-icon size="20px" icon="md-edit"></ons-icon>
+                            </p>
+                        </div>
                     </li>
                 </ul>
             </ul>
             <ul class="list">
                 <li class="list-item">
                     <div class="list-item__left">
-                        <img class="" src="assets/image/Dog.png" alt="Cute kitten" width="150" height="130">
+                        <img class="" src="assets/image/Dog.png" alt="Cute kitten" width="190" height="130">
                     </div>
                     <div class="list-item__center">
                         <div class="title-basket list-item__subtitle">Breed : Syberian Husky</div>
@@ -47,14 +47,22 @@
                     </div>
                 </li>
             </ul>
-            <div class="marketAddress">
-                ที่อยู่ร้าน : 0/23 ถนน.14 sector 3 เขตครึ่งเสี้ยวหลัง ดวงจันทร์
-            </div>
-            
+            <li class="list-item">
+                <div class="list-item__center address2-order">ที่อยู่ร้าน : 0/23 ถนน.14 sector 3 เขตครึ่งเสี้ยวหลัง ดวงจันทร์</div>
+              </li>
+
             <ons-tabbar swipeable position="bottom">
-                <div class="d-flex justify-content-end">sadsadsa</div>
-             </ons-tabbar>
-             
+                    <div class=" detailpayment_paddingLeft">
+                        <div class="">Total : 100,000</div>
+                        <div class="delivery-order">รวมภาษีมูลค่าเพิ่ม</div>
+                    </div>
+                    <div class="pt-2 payment_paddingLeft">
+                        <p class="text-center">
+                            <button type="submit" class="btn btn-danger reportbtn" onclick="paymentButton()">PAYMENT</button>
+                        </p>
+                    </div>
+            </ons-tabbar>
+
         </ons-page>
     </template>
 </ons-page>
