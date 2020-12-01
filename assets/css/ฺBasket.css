@@ -1,0 +1,104 @@
+.titlebar{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 1rem;
+}
+.button-outline{
+    background-color:transparent;
+    border:1px solid #030303;
+    color:#000000;
+    padding: 8px;
+    font-size: 14px;
+    display: inline-block;
+}
+.delete-button{
+    padding-left: 9rem;
+    /* padding-top: 0.275rem;
+    padding-bottom: 0.275rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem; 
+    margin-right: 0.5rem; */
+    color: rgb(253, 5, 5);
+    font-size: 12px;
+}
+.title-basket{
+    color: rgb(8, 8, 8);
+    font-size: 12px;
+}
+.basket-price{
+    color: rgb(8, 8, 8);
+    font-size: 14px;
+}
+.headderfont {
+    padding-top: 5px;
+    padding-bottom: 3px;
+    font-weight: bold;
+    font-size: 32px;
+    color: rgb(252, 186, 3);
+    text-align: center;
+}
+.headderpaddingTop {
+    padding-top: 1px;
+    text-align: center;
+}
+/* .headderpageprofile {
+    font-weight: bold;
+    font-size: 24px;
+    color: #33ccff;
+} */
+ons-toolbar .ordercenter{
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(252, 186, 3);
+   
+}
+.headderOrder{
+    font-size: 48px;
+}
+
+.address1-order{
+    padding-top: 20px;
+    font-size: 22px; 
+    font-weight: bold;
+    color: rgb(252, 186, 3);
+}
+.address2-order{
+    font-size: 18px; 
+}
+.delivery-order{
+    font-size: 18px;
+    color: gray;
+}
+.marketAddress{
+    padding: 10px;
+    font-size: 18px; 
+    font-weight: bold;
+    color: rgb(252, 186, 3);
+}
+.orderFooter{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(122, 121, 121);
+    color: rgb(7, 7, 7);
+    text-align: center;
+ }
+ .payment_paddingLeft{
+    padding-left: 5rem;
+ }
+ .detailpayment_paddingLeft{
+    padding-left: 2rem;
+ }
+ .button_color{
+     color: black;
+     background-color:  rgb(252, 186, 3);
+     border-color:  rgb(252, 186, 3);
+ }
+ .scanQRCode{
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: 28px;
+    color: rgb(129, 129, 129);
+    text-align: center;
+ }
