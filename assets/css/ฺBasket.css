@@ -30,8 +30,8 @@
     font-size: 14px;
 }
 .headderfont {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 5px;
+    padding-bottom: 3px;
     font-weight: bold;
     font-size: 32px;
     color: rgb(252, 186, 3);
@@ -51,4 +51,19 @@ ons-toolbar .ordercenter{
     font-size: 28px;
     color: rgb(252, 186, 3);
    
+}
+headderOrder{
+    font-size: 48px;
+}
+titileOrder{
+
+}
+p .address-order{
+    font-size: 20px; 
+}
+p .address-order{
+    font-size: 20px; 
+}
+p .delivery-order{
+    font-size: 18px;
 }
