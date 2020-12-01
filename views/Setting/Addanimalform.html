@@ -1,0 +1,81 @@
+<ons-page>
+    <ons-navigator swipeable id="Navigator_addAnimalform" page="addAnimalform.html"></ons-navigator>
+    <template id="addAnimalform.html">
+        <ons-page id="addAnimalform">
+            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back"
+                onclick="backtoProfilePage()">
+                <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
+            </ons-fab>
+            <div class="formTitle">Animal Detail</div>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Breed/สายพันธุ์" class="form-control formSize">
+                </div>
+            </ons-row>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Breeder(Male)/พ่อพันธุ์" class="form-control formSize">
+                </div>
+            </ons-row>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Breeder(Femail)/แม่พันธุ์" class="form-control formSize">
+                </div> 
+            </ons-row>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Sex/เพศ" class="form-control formSize">
+                </div>
+            </ons-row>
+            <ons-row class="row align-items-center addAnimalElement">
+                <div class="formCenter">
+                    <input type="text" placeholder="Age/อายุ" class="form-control formSize">
+                </div>
+            </ons-row>
+            <ons-row class="row d-flex align-items-center">
+                <div class="myShopTitle2">
+                    Type
+                </div>
+            <ons-select id="animaruType" class="btn addAnimalElement3" onchange="editSelects(event)">
+                <option value="Dog" >Dog</option>
+                <option value="Cat">Cat</option>
+                <option value="Small animal">Small animal</option>
+                <option value="Water animal">Water animal</option>
+              </ons-select>
+            </ons-row>
+            <ons-row class="row addAnimalElement2" style="margin-top: 10px;">
+                <div class="myShopTitle">
+                    Pet Degree
+                </div>
+                  <div class="segment" style="width:200px; margin-top: 7px;margin-left: 5rem;">
+                    <div class="segment__item">
+                      <input type="radio" class="segment__input" name="navi-segment-a" checked>
+                      <div class="segment__button">Yes</div>
+                    </div>
+              
+                    <div class="segment__item">
+                      <input type="radio" class="segment__input" name="navi-segment-a">
+                      <div class="segment__button">No</div>
+                    </div>
+                  </div>
+                </ons-row>
+                <ons-row class="row align-items-center addAnimalElement2" >
+                    <div class="formCenter">
+                        <input type="text" placeholder="Description/คำอธิบาย" class="form-control formSize" style="height: 100px;" required>
+                    </div>
+                </ons-row>
+                <ons-row class="row addAnimalElement2" style="margin-left: 1.5rem;">
+                    <label class="checkbox checkbox--material">
+                    <input type="checkbox" class="checkbox__input checkbox--material__input">
+                    <div class="checkbox__checkmark checkbox--material__checkmark"></div>
+                    ยอมรับข้อตกลงทุกประการไร้เงื่อนไข
+                  </label>
+                </ons-row>
+                
+            <div class="confirmedBtn">
+                <button type="submit" class="confirmEditBtn" onclick="backtoMyStore()">Confirm</button>
+            </div>
+            
+        </ons-page>
+    </template>
+</ons-page>

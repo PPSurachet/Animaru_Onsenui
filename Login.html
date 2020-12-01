@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <ong-page>
+    <ong-page id="LoginPage">
         <div class="container divcon">
             <div class=" display2 text-center">
                 <div class="text-center">
@@ -29,45 +29,37 @@
                 </div>
             </div>
             <div class="container text-center">
-                <input type="email" class="form-control input" placeholder="Username" name="" id="email" placeholder="">
-                <small id="emaillHelpid" class="from-text"></small>
-                <br>
-
-                <div class="form-group ">
-
-                    <input type="password" class=" form-control input" placeholder="Password" name="" id="password"
+                <div class="form-group">
+                    <input type="email" class="form-control input" placeholder="Username" name="email" id="email"
                         placeholder="">
                 </div>
-
-                <br>
+                <div class="form-group ">
+                    <input type="password" class=" form-control input" placeholder="Password" name="password"
+                        id="password" placeholder="">
+                </div>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary buttonsingin" id="signinemail">
-                        <h4>SINGIN</h4>
-                    </button></p>
-                    <br>
+                    <button type="button" class="btn btn-primary buttonsingin mb-4 font-weight-bold" id="signIn">
+                        SING IN
+                    </button>
                     <div class="text-center">
                         <button type="button" class="btn btn-light buttonGoogle" id="signingoogle">
                             <img src="/assets/image/google.png" class="imggoogle">
-                        </button></p>
-                        </p>
-                        <p class="text-center">
-                        <h3 id="errormessage"></h3>
-                        </p>
+                        </button>
                     </div>
-                    <div><label for="" class="register"> Don't have account
-
-                            ?<a href="/Register.html">REGISTER</a> <br>hereForgot password.</bt></label></div>
-
+                    <div class="mt-3">
+                        <label for="" class="register"> Don't have account ? <a href="/Register.html">REGISTER</a>
+                    </div>
                 </div>
             </div>
+        </div>
     </ong-page>
-
 </body>
 
 <!-- import firebase -->
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-analytics.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
 <script src="/assets/Firebase/Firebase.js"></script>
 
 <!-- import library  -->
