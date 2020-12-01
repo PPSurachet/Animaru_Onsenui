@@ -3,11 +3,34 @@
     <template id="Search.html">
         <ons-page id="SearchPage">
 
-            <ons-row class="backgroudSearchbutton"> <button type="button" class="col-6 p-1  btn btnh">สัตว์</button>
+            <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" class="backgroudSearchbutton"
+                item-width="190px" style="height: 8%">
 
-                <button type="button" class="col-6 p-1 btn btnh">ร้านค้า</button>
-            </ons-row>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">สัตว์</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">ร้ายค้า</button>
+                </ons-carousel-item>
 
+            </ons-carousel>
+
+            <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" class="backgroudSearchbutton"
+                item-width="92px" style="height: 8%">
+
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">หมา</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">แมว</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">สัตว์เล็ก</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh">สัตว์น้ำ</button>
+                </ons-carousel-item>
+            </ons-carousel>
             <ons-row class="d-flex justify-content-around pl-1 pr-1">
                 <ons-col class="col-6 p-1">
                     <div class="containerH">
@@ -58,6 +81,7 @@
                     </div>
                 </ons-col>
             </ons-row>
+
 
         </ons-page>
     </template>
