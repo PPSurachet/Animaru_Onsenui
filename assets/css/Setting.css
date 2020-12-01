@@ -204,6 +204,14 @@ ons-list-item{
     margin-bottom: 0.7rem;
 }
 
+.mystoreTitle{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 0.7rem;
+    color: #fff;
+}
+
 .formCenter{
     margin-left: 2rem;
 }
@@ -234,3 +242,11 @@ ons-list-item{
     margin-bottom: 2rem;
 }
 
+.addAreaBorder{
+    border: rgb(165, 165, 165) solid 1px;
+}
+
+.titleBG{
+    background-color: #FFC149;
+    height: 53.600px;
+}

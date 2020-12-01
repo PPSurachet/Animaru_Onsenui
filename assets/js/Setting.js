@@ -24,7 +24,6 @@ function storePage() {
 
 function addAnimaruForm() {
     document.querySelector('#Navigator_setting').pushPage("views/Setting/addanimalform.html")
-    
 }
 
 function backtoMyStore(){
