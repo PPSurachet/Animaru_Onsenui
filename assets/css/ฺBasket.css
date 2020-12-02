@@ -22,18 +22,20 @@
     font-size: 12px;
 }
 .title-basket{
-    color: rgb(8, 8, 8);
-    font-size: 12px;
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: bold;
 }
 .basket-price{
     color: rgb(8, 8, 8);
     font-size: 14px;
 }
 .headderfont {
+    margin-top: 1.2rem;
     padding-top: 5px;
     padding-bottom: 3px;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 50px;
     color: rgb(252, 186, 3);
     text-align: center;
 }
@@ -50,7 +52,7 @@ ons-toolbar .ordercenter{
     font-weight: bold;
     font-size: 28px;
     color: rgb(252, 186, 3);
-   
+
 }
 .headderOrder{
     font-size: 48px;
@@ -83,22 +85,53 @@ ons-toolbar .ordercenter{
     background-color: rgb(122, 121, 121);
     color: rgb(7, 7, 7);
     text-align: center;
- }
- .payment_paddingLeft{
-    padding-left: 5rem;
- }
- .detailpayment_paddingLeft{
-    padding-left: 2rem;
- }
- .button_color{
-     color: black;
-     background-color:  rgb(252, 186, 3);
-     border-color:  rgb(252, 186, 3);
- }
- .scanQRCode{
+}
+.payment_paddingLeft{
+padding-left: 5rem;
+}
+.detailpayment_paddingLeft{
+padding-left: 2rem;
+}
+.button_color{
+    color: black;
+    background-color:  rgb(252, 186, 3);
+    border-color:  rgb(252, 186, 3);
+}
+
+.button_color_Delete{
+    color: white;
+    background-color:  rgb(255, 0, 0);
+    border-color:  rgb(255, 0, 0);
+}
+.scanQRCode{
     padding-top: 10px;
     font-weight: bold;
     font-size: 28px;
     color: rgb(129, 129, 129);
     text-align: center;
- }
+}
+
+.locationBox{
+    background-color: white;
+    box-shadow: 4px 4px 8px 0 #64646480;
+    border-radius: 7px;
+}
+
+.location{
+    font-size: 14.5px;
+    font-weight: bold;
+    word-spacing: 3.5px;
+}
+
+.noBasket{
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.borderItem{
+    margin: 10px 10px;
+    padding: 15px 10px;
+    border: 5px solid;
+    border-radius: 30px;
+    border-color: #CE9A35;
+}

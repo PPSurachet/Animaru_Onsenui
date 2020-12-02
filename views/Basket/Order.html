@@ -2,67 +2,31 @@
     <ons-navigator swipeable id="Navigator_order" page="Order.html"></ons-navigator>
     <template id="Order.html">
         <ons-page id="OrderPage">
-            <ons-list-item>
-                <div class="toolbar__center headderfont">ORDER</div>
-            </ons-list-item>
-            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="Back"
-                onclick="backtoBasketPage()">
+            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" id="BackBasket">
                 <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
             </ons-fab>
-            <ul class="list">
-                <ons-list-item>
-                    <div class="titlebar">ร้านค้า ANIMARU
-                        <button class="btn button_color btn-xs">ดูหน้าร้าน</button>
-                    </div>
-                </ons-list-item>
-                <ul class="list">
-                    <li class="list-item">
-                        <div class="list-item__left">
-                            <img style="border:5px solid black;" src="assets/image/map.png" alt="Cute kitten"
-                                width="180" height="130">
-                        </div>
-                        <div class="title-basket list-item__subtitle">
-                            <p class="address1-order">PSU phuket
-                            </p>
-                            <p class="address2-order">ADDRESS
-                                <ons-icon size="20px" icon="md-edit"></ons-icon>
-                            </p>
-                            <p class="delivery-order">Delivery options
-                                <ons-icon size="20px" icon="md-edit"></ons-icon>
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </ul>
-            <ul class="list">
-                <li class="list-item">
-                    <div class="list-item__left">
-                        <img class="" src="assets/image/Dog.png" alt="Cute kitten" width="190" height="130">
-                    </div>
-                    <div class="list-item__center">
-                        <div class="title-basket list-item__subtitle">Breed : Syberian Husky</div>
-                        <div class="title-basket list-item__subtitle">Breeder : Freepik</div>
-                        <div class="title-basket list-item__subtitle">Bark : Yes</div>
-                        <div class="title-basket list-item__subtitle">ราคา : 100,000</div>
-                    </div>
-                </li>
-            </ul>
-            <li class="list-item">
-                <div class="list-item__center address2-order">ที่อยู่ร้าน : 0/23 ถนน.14 sector 3 เขตครึ่งเสี้ยวหลัง ดวงจันทร์</div>
-              </li>
+            <div class="d-flex align-items-center">
+                <div class="toolbar__center headderfont">ORDER</div>
+            </div>
+            <div class="" id="showOrderPets">
 
-            <ons-tabbar swipeable position="bottom">
-                    <div class=" detailpayment_paddingLeft">
-                        <div class="">Total : 100,000</div>
-                        <div class="delivery-order">รวมภาษีมูลค่าเพิ่ม</div>
-                    </div>
-                    <div class="pt-2 payment_paddingLeft">
-                        <p class="text-center">
-                            <button type="submit" class="btn btn-danger reportbtn" onclick="paymentButton()">PAYMENT</button>
-                        </p>
-                    </div>
-            </ons-tabbar>
-
+            </div>
+            <div class="m-4">
+                <ons-row class="locationBox p-2">
+                    <ons-col class="col-3 pr-0">
+                        <img src="/assets/image/Location.png" width="55" alt="" srcset="">
+                    </ons-col>
+                    <ons-col class="col-9 pl-0" id="showLocation">
+                        <div class="location">
+                            32/11 หมู่ 1 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต 83120
+                        </div>
+                    </ons-col>
+                </ons-row>
+            </div>
+            <div class="ml-4 mr-4 mt-3">
+                <button type="button" class="btn btn-primary btn-block btn-lg font-weight-bold"
+                    style="background-color: #CE9A35;border-color: #CE9A35;">PAYMENT</button>
+            </div>
         </ons-page>
     </template>
 </ons-page>

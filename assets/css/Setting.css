@@ -88,10 +88,10 @@ ons-list-item{
 }
 
 .profileName{
-    padding-left: 0.5rem;
-    font-size: 22px;
+    font-size: 25px;
     margin-top: 2rem;
     margin-left: 0.5rem;
+    font-weight: bold;
 }
 
 .btn-lightmode{

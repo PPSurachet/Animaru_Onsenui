@@ -23,7 +23,7 @@ const getRecommededPets = () => {
             <img src="${doc.data().photoURL}" width="100%">
             <div>Breed : ${doc.data().Breed}</div>
             <div>Breeder : ${doc.data().Breeder}</div>
-            <div>Price : ${doc.data().Price}</div>
+            <div>Price : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
          </div>
       </ons-col>`
          $("#showItemRecomended").append(result);
@@ -88,11 +88,11 @@ const selectAnimal = (Breed, Navigator) => {
                <div><b>Daddy</b> : ${doc.data().Daddy} </div>
                <div><b>Mommy</b> : ${doc.data().Mommy}</div>
                <div><b>Gender</b> : ${doc.data().Gender}</div>
-               <div><b>Price</b> : ${doc.data().Price}</div>
+               <div><b>Price</b> : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
                <div><b>Description</b> : ${doc.data().Description} </div>
             </div>
             <div class="editbtnSelect">
-               <button type="button" class="btnSelect" onclick="AddBasketHome()">ให้บ้าน</button>
+               <button type="button" class="btnSelect" onclick="AddBasketHome('${doc.id}','${Navigator}')">ให้บ้าน</button>
             </div>
             `
          selectShop(Shop, Navigator);
@@ -184,7 +184,7 @@ const showPetShop = (Breeder) => {
                      <img src="${doc.data().photoURL}" width="100%">
                      <div>Breed : ${doc.data().Breed}</div>
                      <div>Breeder : ${doc.data().Breeder}</div>
-                     <div>Price : ${doc.data().Price}</div>
+                     <div>Price : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
                   </div>
                </ons-col>`
             $("#showPetinShop").append(result);
@@ -224,7 +224,7 @@ const getPetsCategory = (Category) => {
                <img src="${doc.data().photoURL}" width="100%">
                <div>Breed : ${doc.data().Breed}</div>
                <div>Breeder : ${doc.data().Breeder}</div>
-               <div>Price : ${doc.data().Price}</div>
+               <div>Price : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
             </div>
          </ons-col>`
          $("#showItemRecomended").append(result);
@@ -272,6 +272,16 @@ const getShopCategory = (Category) => {
    });
 };
 
-const AddBasketHome = () => {
-   ons.notification.alert('ให้บ้านสำเร็จ')
+const AddBasketHome = (docID, Navigator) => {
+   const user = firebase.auth().currentUser;
+   db.collection("Pets").doc(docID).update({
+      Basket: firebase.firestore.FieldValue.arrayUnion(user.uid)
+   }).then(function () {
+      ons.notification.alert('ให้บ้านสำเร็จ').then(function () {
+         getBasketForUser(user);
+         document.querySelector(`${Navigator}`).popPage();
+      })
+   }).catch(function () {
+
+   })
 }

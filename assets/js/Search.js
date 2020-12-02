@@ -141,23 +141,23 @@ const selectSearchAnimal = (Breed, Navigator) => {
         querySnapshot.forEach(function (doc) {
             const result = /*html*/
                 `
-             <div class="containerSelect text-center" style="background-color:white; margin:0.70rem;">
-                <img src="${doc.data().photoURL}" width="60%" height="200px">
-             </div>
-             <div class="textSelect">
-                <div><b>Breed</b> : ${doc.data().Breed}</div>
-                <div><b>Breeder</b> : ${doc.data().Breeder}</div>
-                <div><b>location</b> : ที่อยู่ : 0/23 ถนน.14 sector 3 เขตครึ่งเสี้ยวหลัง ดวงจันทร์</div>
-                <div><b>Daddy</b> : ${doc.data().Daddy} </div>
-                <div><b>Mommy</b> : ${doc.data().Mommy}</div>
-                <div><b>Gender</b> : ${doc.data().Gender}</div>
-                <div><b>Price</b> : ${doc.data().Price}</div>
-                <div><b>Description</b> : ${doc.data().Description} </div>
-             </div>
-             <div class="editbtnSelect">
-                <button type="button" class="btnSelect" onclick="AddBasketSearch()">ให้บ้าน</button>
-             </div>
-             `
+                <div class="containerSelect text-center" style="background-color:white; margin:0.70rem;">
+                    <img src="${doc.data().photoURL}" width="60%" height="200px">
+                </div>
+                <div class="textSelect">
+                    <div><b>Breed</b> : ${doc.data().Breed}</div>
+                    <div><b>Breeder</b> : ${doc.data().Breeder}</div>
+                    <div><b>location</b> : ที่อยู่ : 0/23 ถนน.14 sector 3 เขตครึ่งเสี้ยวหลัง ดวงจันทร์</div>
+                    <div><b>Daddy</b> : ${doc.data().Daddy} </div>
+                    <div><b>Mommy</b> : ${doc.data().Mommy}</div>
+                    <div><b>Gender</b> : ${doc.data().Gender}</div>
+                    <div><b>Price</b> : ${doc.data().Price}</div>
+                    <div><b>Description</b> : ${doc.data().Description} </div>
+                </div>
+                <div class="editbtnSelect">
+                    <button type="button" class="btnSelect" onclick="AddBasketSearch('${doc.id}','${Navigator}')">ให้บ้าน</button>
+                </div>
+                `
             selectSearchShop(doc.data().Breeder, Navigator);
             $("#showSelectSearchAnimal").append(result)
         });
@@ -262,6 +262,16 @@ const showPetSearchShop = (Breeder) => {
     });
 };
 
-const AddBasketSearch = () => {
-    ons.notification.alert('ให้บ้านสำเร็จ')
+const AddBasketSearch = (docID, Navigator) => {
+    const user = firebase.auth().currentUser;
+    db.collection("Pets").doc(docID).update({
+        Basket: firebase.firestore.FieldValue.arrayUnion(user.uid)
+    }).then(function () {
+        ons.notification.alert('ให้บ้านสำเร็จ').then(function () {
+            getBasketForUser(user);
+            document.querySelector(`${Navigator}`).popPage();
+        })
+    }).catch(function () {
+
+    })
 }
