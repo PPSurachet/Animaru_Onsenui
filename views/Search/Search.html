@@ -2,7 +2,20 @@
     <ons-navigator swipeable id="Navigator_search" page="Search.html"></ons-navigator>
     <template id="Search.html">
         <ons-page id="SearchPage">
-            <div class="h3">This is myShopPage</div>
+
+            <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel" class="backgroudSearchbutton"
+                item-width="190px" style="height: 8%">
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh" id="clickSearchPets">สัตว์</button>
+                </ons-carousel-item>
+                <ons-carousel-item>
+                    <button type="button" class="btn btnh" id="clickSearchshop">ร้านค้า</button>
+                </ons-carousel-item>
+            </ons-carousel>
+            <div class="" id="categoryButton"></div>
+            <ons-row class="d-flex justify-content-around pl-1 pr-1 mt-2" id="showSearchPets">
+
+            </ons-row>
         </ons-page>
     </template>
 </ons-page>
