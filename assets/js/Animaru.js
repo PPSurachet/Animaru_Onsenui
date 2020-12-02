@@ -20,3 +20,14 @@ const checkUserSignIn = () => {
         }
     });
 }
+
+const profileUser = (user) => {
+    const result =
+        `                    
+        <ons-row class="d-flex justify-content-start">
+            <img src="${user.photoURL}" alt="" class="imgprofile">
+            <div class="profileName">${user.displayName}</div>
+        </ons-row>
+        `
+    $("#showProfile").append(result)
+}

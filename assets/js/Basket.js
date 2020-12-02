@@ -9,18 +9,6 @@ document.addEventListener('init', function (event) {
 
 });
 
-
-const profileUser = (user) => {
-    const result =
-        `                    
-        <ons-row>
-            <img src="${user.photoURL}" alt="" class="imgprofile">
-            <div class="profileName">${user.displayName}</div>
-        </ons-row>
-        `
-    $("#showProfile").append(result)
-}
-
 const getBasketForUser = (user) => {
     $("#showBasket").empty();
     var countItem = 0;
