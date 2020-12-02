@@ -5,7 +5,6 @@ $(function () {
 const checkUserSignIn = () => {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
-
             profileUser(user);
             getBasketForUser(user);
             // user.updateProfile({

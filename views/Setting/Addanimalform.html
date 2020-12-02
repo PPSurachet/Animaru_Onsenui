@@ -2,78 +2,79 @@
     <ons-navigator swipeable id="Navigator_addAnimalform" page="addAnimalform.html"></ons-navigator>
     <template id="addAnimalform.html">
         <ons-page id="addAnimalform">
-            <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);">
+            <ons-fab position="top left" onclick="backfromAdd()" style="color: black; background-color: rgb(252, 186, 3);">
                 <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
             </ons-fab>
-            <div class="formTitle">Animal Detail</div>
-            <ons-row class="row align-items-center addAnimalElement">
-                <div class="formCenter">
-                    <input type="text" placeholder="Breed/สายพันธุ์" class="form-control formSize">
-                </div>
-            </ons-row>
-            <ons-row class="row align-items-center addAnimalElement">
-                <div class="formCenter">
-                    <input type="text" placeholder="Breeder(Male)/พ่อพันธุ์" class="form-control formSize">
-                </div>
-            </ons-row>
-            <ons-row class="row align-items-center addAnimalElement">
-                <div class="formCenter">
-                    <input type="text" placeholder="Breeder(Femail)/แม่พันธุ์" class="form-control formSize">
-                </div>
-            </ons-row>
-            <ons-row class="row align-items-center addAnimalElement">
-                <div class="formCenter">
-                    <input type="text" placeholder="Sex/เพศ" class="form-control formSize">
-                </div>
-            </ons-row>
-            <ons-row class="row align-items-center addAnimalElement">
-                <div class="formCenter">
-                    <input type="text" placeholder="Age/อายุ" class="form-control formSize">
-                </div>
-            </ons-row>
-            <ons-row class="row d-flex align-items-center">
-                <div class="myShopTitle2">
-                    Type
-                </div>
-                <ons-select id="animaruType" class="btn addAnimalElement3" onchange="editSelects(event)">
-                    <option value="Dog">Dog</option>
-                    <option value="Cat">Cat</option>
-                    <option value="Small animal">Small animal</option>
-                    <option value="Water animal">Water animal</option>
-                </ons-select>
-            </ons-row>
-            <ons-row class="row addAnimalElement2" style="margin-top: 10px;">
-                <div class="myShopTitle">
-                    Pet Degree
-                </div>
-                <div class="segment" style="width:200px; margin-top: 7px;margin-left: 5rem;">
-                    <div class="segment__item">
-                        <input type="radio" class="segment__input" name="navi-segment-a" checked>
-                        <div class="segment__button">Yes</div>
+            <div class="formTitle mt-3">Animal Detail</div>
+            <div class="col-11 m-auto ">
+                <form id="myForm" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="Breed">Breed</label>
+                        <input type="text" autocomplete="off" class="form-control" name="Breed" id="Breed" placeholder="Breed" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Breeder">Breeder</label>
+                        <input type="text"  autocomplete="off" class="form-control" name="Breeder" id="Breeder" disabled required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Daddy">Daddy</label>
+                        <input type="text"  autocomplete="off" class="form-control" name="Daddy" id="Daddy" placeholder="Daddy">
+                    </div>
+                    <div class="form-group">
+                        <label for="Mommy">Mommy</label>
+                        <input type="text" autocomplete="off"  class="form-control" name="Mommy" id="Mommy" placeholder="Mommy">
+                    </div>
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="text"  autocomplete="off"  class="form-control" name="Price" id="Price" placeholder="Price" required>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male" required>
+                        <label class="form-check-label" for="inlineRadio1">Male</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female"
+                            required>
+                        <label class="form-check-label" for="inlineRadio2">Female</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="inlineRadio3" value="None" required>
+                        <label class="form-check-label" for="inlineRadio2">None</label>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label for="Age">Age</label>
+                            <input type="text" class="form-control" autocomplete="off"  name="Age" id="Age" placeholder="Age" required>
+                        </div>
+                        <div class="col">
+                            <label class="mr-sm-2" for="Year">Year</label>
+                            <select class="custom-select mr-sm-2" id="Years" required>
+                                <option value="Month">Month</option>
+                                <option value="Year">Year</option>
+                            </select>
+                        </div>
                     </div>
 
-                    <div class="segment__item">
-                        <input type="radio" class="segment__input" name="navi-segment-a">
-                        <div class="segment__button">No</div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label class="mr-sm-2" for="Year">Type</label>
+                            <select class="custom-select mr-sm-2" id="Type" required>
+                                <option value="Dog">Dog</option>
+                                <option value="Cat">Cat</option>
+                                <option value="Small">Small</option>
+                                <option value="Water">Water</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-            </ons-row>
-            <ons-row class="row align-items-center addAnimalElement2">
-                <div class="formCenter">
-                    <input type="text" placeholder="Description/คำอธิบาย" class="form-control formSize"
-                        style="height: 100px;" required>
-                </div>
-            </ons-row>
-            <ons-row class="row addAnimalElement2" style="margin-left: 1.5rem;">
-                <label class="checkbox checkbox--material">
-                    <input type="checkbox" class="checkbox__input checkbox--material__input">
-                    <div class="checkbox__checkmark checkbox--material__checkmark"></div>
-                    ยอมรับข้อตกลงทุกประการไร้เงื่อนไข
-                </label>
-            </ons-row>
 
-            <div class="confirmedBtn">
-                <button type="submit" class="confirmEditBtn" onclick="backtoMyStore()">Confirm</button>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Descriptions</label>
+                        <textarea class="form-control"  autocomplete="off"  id="Descriptions" rows="3" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="button" class="btn font-weight-bold addpetBtn" id="AddPets">Add Pets</button>
+                    </div>
+                </form>
             </div>
 
         </ons-page>
