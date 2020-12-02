@@ -14,12 +14,12 @@ function profilePage() {
     document.querySelector('#Navigator_setting').pushPage("views/Setting/Profile.html");
 }
 
-function backtoProfilePage() {
+function backtoSetting() {
     document.querySelector('#Navigator_setting').popPage();
 }
 
 function storePage() {
-    document.querySelector('#Navigator_setting').pushPage("views/Setting/MyShop.html");
+    document.querySelector('#Navigator_setting').pushPage("views/Setting/OpenShop.html")
 }
 
 function addAnimaruForm() {
@@ -27,5 +27,5 @@ function addAnimaruForm() {
 }
 
 function backtoMyStore(){
-    document.querySelector('#Navigator_setting').popPage();
+    document.querySelector('#Navigator_myShop').popPage();
 }

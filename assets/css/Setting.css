@@ -222,13 +222,18 @@ ons-list-item{
 }
 
 .myShopTitle{
-    margin-top: 0.5rem;
+    margin-top: 0.6rem;
     margin-left: 2.5rem;
     font-size: 17px;
 }
 
 .myShopTitle2{
     margin-left: 2.5rem;
+    font-size: 17px;
+}
+
+.myShopTitle3{
+    margin-top: 0.6rem;
     font-size: 17px;
 }
 
@@ -276,4 +281,9 @@ ons-list-item{
     color: white;
     margin-top: 0.5rem;
     font-size: 14px;
+}
+
+.collectAnimaltype{
+    margin-left: 4rem;
+    margin-top: 1rem;
 }
