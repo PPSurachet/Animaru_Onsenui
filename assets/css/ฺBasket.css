@@ -129,9 +129,5 @@ padding-left: 2rem;
 }
 
 .borderItem{
-    margin: 10px 10px;
-    padding: 15px 10px;
-    border: 5px solid;
-    border-radius: 30px;
-    border-color: #CE9A35;
+    margin-top: 30px;
 }
