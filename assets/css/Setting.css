@@ -313,3 +313,14 @@ ons-list-item{
     font-weight: bold;
     font-size: 14px;
 }
+
+.addAnimalElement{
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.myShopTitle3{
+    margin-top: 0.6rem;
+    font-size: 17px;
+}
+

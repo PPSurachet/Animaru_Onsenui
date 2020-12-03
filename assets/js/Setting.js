@@ -367,3 +367,9 @@ const getHistory = () => {
 const backHistroy = () => {
     document.querySelector("#Navigator_setting").popPage();
 }
+
+const createShop = () => {
+    const user = firebase.auth().currentUser;
+    const Type = $("input[type='checkbox']").val();
+    console.log(Type);
+}
