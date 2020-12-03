@@ -1,0 +1,30 @@
+.btnGet{
+    border: none;
+    width: 40%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #E76346;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 5px 5px 3px 1px #38383880;
+}
+
+body{
+    background-color: #E7AE3F;
+}
+
+.center {
+    margin-top: 28%;
+    padding: 70px 0;
+    text-align: center;
+  }
+
+  .center div{
+      margin-top: 20px;
+      font-weight: 600;
+  }
+
+  *{
+    font-family: 'Comfortaa', cursive;
+}

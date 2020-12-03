@@ -6,15 +6,38 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Weather PWA">
+  <link rel="apple-touch-icon" href="/assets/image/icons/icon-192x192.png">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/assets/css/Getstart.css">
+
+  <!-- import font icon  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Manifest -->
+  <link rel="manifest" href="/manifest.json">
 </head>
 
 <body>
-  <div class="container text-center">
-    <button type="button" class="btn btn-primary mt-5" id="getStart">Get Started</button>
+  <div class="container center">
+    <img src="/assets/image/Group 192.png" alt="">
+    <div class="imgpix">
+      <img src="/assets/image/Group 237.png" alt="">
+    </div>
+    <div>
+      100% product quality guarantee<br>
+      We care about you
+    </div>
+    <div>
+      <button type="button" class="btnGet" id="getStart">Get Started</button>
+    </div>
+
   </div>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -25,10 +48,22 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+
+    <script src="service-worker.js"></script>
   <script>
     $("#getStart").click(function () {
       window.location.href = "Login.html"
     })
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js')
+          .then((reg) => {
+            console.log('Service worker registered.', reg);
+          });
+      });
+    }
   </script>
 </body>
 

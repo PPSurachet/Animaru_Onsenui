@@ -93,7 +93,7 @@ const showPetsMyShop = (Breeder) => {
                     <div class="font-weight-bold">Price : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
                     <ons-row class="mt-2 text-center">
                         <ons-col class="col-6 p-0">
-                            <button class="btn btnEdit">Edit</button>
+                            <button class="btn btnEdit" onclick="editPetsPage('${doc.id}')">Edit</button>
                         </ons-col>
                         <ons-col class="col-6 p-0">
                             <button class="btn btnDelete" onclick="deletePetsInShop('${doc.id}')">Delete</button>
@@ -151,8 +151,60 @@ const addAnimaruForm = () => {
 
 }
 
+const editPetsPage = (docID) => {
+    db.collection("Pets").doc(docID).get().then(function(doc) {
+        $("#editBreed").val(doc.data().Breed);
+        $("#editBreeder").val(doc.data().Breeder);
+        $("#editDaddy").val(doc.data().Daddy);
+        $("#editMommy").val(doc.data().Mommy);
+        $("#editPrice").val(doc.data().Price);
+        $("#editAge").val(doc.data().Age);;
+        $("#editDescriptions").val(doc.data().Description);
+        $(".editPetsBtn").attr('id',docID)
+    }).catch(function(error) {
+        console.log("Error getting document:", error);
+    });
+    document.querySelector('#Navigator_Shop').pushPage('views/Setting/EditAnimal.html')
+}
+
+const confirmEdit = (docID) => {
+    const Breed = $("#editBreed").val();
+    const Breeder = $("#editBreeder").val();
+    const Daddy = $("#editDaddy").val();
+    const Mommy = $("#editMommy").val();
+    const Price = $("#editPrice").val();
+    const Gender = $("input[name='editGender']:checked").val();
+    const Age = $("#editAge").val();
+    const Years = $("#editYears").val();
+    const Description = $("#editDescriptions").val();
+
+    db.collection("Pets").doc(docID).update({
+        Breed: Breed,
+        Breeder: Breeder,
+        Daddy: Daddy,
+        Mommy: Mommy,
+        Gender: Gender,
+        Price: Price,
+        Age: Age + " " + Years,
+        Description: Description,
+    })
+    .then(function() {
+        storePage();
+        ons.notification.alert({
+            title: "Animaru",
+            message: "Edit Pets Success",
+        }).then(function () {
+            document.querySelector("#Navigator_Shop").popPage();
+        })
+    })
+    .catch(function(error) {
+        // The document probably doesn't exist.
+        console.error("Error updating document: ", error);
+    });
+}
+
 const backfromAdd = () => {
-    document.querySelector("#Navigator_setting").popPage();
+    document.querySelector("#Navigator_Shop").popPage();
 }
 
 const gotoEdit = () => {
