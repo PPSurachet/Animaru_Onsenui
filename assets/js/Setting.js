@@ -41,9 +41,9 @@ const storePage = () => {
                     <ons-col class="col-7 text">
                         <div>${doc.data().Name}</div>
                         <ons-row class="d-flex justify-content-start container1">
-                        <ons-col class="col-4 editH">
-                            ${doc.data().Type}
-                        </ons-col>
+                            <ons-col class="col-4 editH">
+                                ${doc.data().Type}
+                            </ons-col>
                         </ons-row>
                         <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
                     </ons-col>
@@ -73,7 +73,7 @@ const storePage = () => {
         }
 
         $("#openShop").click(function () {
-            document.querySelector("#Navigator_setting").pushPage("views/Setting/openShop.html");
+            document.querySelector("#Navigator_Shop").pushPage("views/Setting/openShop.html");
         })
     });
 }
@@ -370,6 +370,38 @@ const backHistroy = () => {
 
 const createShop = () => {
     const user = firebase.auth().currentUser;
-    const Type = $("input[type='checkbox']").val();
-    console.log(Type);
+    const Name = $("#Name").val();
+    const Type = $("input[type='checkbox']:checked").val();
+    ons.notification.confirm({
+        title: Name,
+        message: "Create Your Shop",
+        callback: (index) => {
+            if (index == 1) {
+                db.collection("Shops").add({
+                    Name: Name,
+                    Owner: user.uid,
+                    PhotoURL: user.photoURL,
+                    Type: Type,
+                    Rating: 0
+                }).then(function (docRef) {
+                    storePage();
+                    ons.notification.alert({
+                        title: "Animaru",
+                        message: "Create Shop Complete",
+                    }).then(function () {
+                        document.querySelector("#Navigator_Shop").popPage();
+                    })
+                }).catch(function (error) {
+                    ons.notification.alert({
+                        title: "Animaru",
+                        message: error,
+                    });
+                });
+            }
+        }
+    })
+}
+
+const backCreateShop = () => {
+    document.querySelector("#Navigator_Shop").popPage();
 }

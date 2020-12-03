@@ -1,8 +1,12 @@
 <ons-page id="OpenShop">
-    <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);">
+    <ons-fab position="top left" style="color: black; background-color: rgb(252, 186, 3);" onclick="backCreateShop()">
         <i class="material-icons md-48" style="margin-top: 16px;">arrow_back</i>
     </ons-fab>
-    <div class="formTitle">Create Shop</div>
+    <div class="titleBG">
+        <div class="mystoreTitle">
+            Create Shop
+        </div>
+    </div>
     <div class="mt-4"></div>
     <div class="col-10 p-0 m-auto">
         <div class="formCenter">
@@ -10,11 +14,6 @@
         </div>
     </div>
     <div class="mt-3"></div>
-    <div class="col-10 p-0 m-auto">
-        <div class="formCenter">
-            <input type="text" placeholder="ชื่อเจ้าของร้าน / Shop owner" class="form-control p-3" id="Breeder">
-        </div>
-    </div>
     <div class="mt-3"></div>
     <div class="col-10 p-0 m-auto">
         <div class="formCenter">
@@ -30,7 +29,7 @@
                 <div class="col-6 p-0">
                     <ons-list-item tappable>
                         <label class="left">
-                            <ons-checkbox input-id="check-1"></ons-checkbox>
+                            <ons-checkbox input-id="check-1" value="Dog"></ons-checkbox>
                         </label>
                         <label for="check-1" class="center">
                             Dog
@@ -40,7 +39,7 @@
                 <div class="col-6 p-0">
                     <ons-list-item tappable>
                         <label class="left">
-                            <ons-checkbox input-id="check-2"></ons-checkbox>
+                            <ons-checkbox input-id="check-2" value="Cat"></ons-checkbox>
                         </label>
                         <label for="check-2" class="center">
                             Cat
@@ -52,7 +51,7 @@
                 <div class="col-6 p-0">
                     <ons-list-item tappable>
                         <label class="left">
-                            <ons-checkbox input-id="check-3"></ons-checkbox>
+                            <ons-checkbox input-id="check-3" value="Small"></ons-checkbox>
                         </label>
                         <label for="check-3" class="center">
                             Small
@@ -62,7 +61,7 @@
                 <div class="col-6 p-0">
                     <ons-list-item tappable>
                         <label class="left">
-                            <ons-checkbox input-id="check-4"></ons-checkbox>
+                            <ons-checkbox input-id="check-4" value="Water"></ons-checkbox>
                         </label>
                         <label for="check-4" class="center">
                             Water
@@ -78,11 +77,11 @@
         </div>
         <div class="segment" style="width:200px; margin-top: 8px;margin-left: 2.5rem;">
             <div class="segment__item">
-                <input type="radio" class="segment__input" name="navi-segment-a" checked>
+                <input type="radio" class="segment__input" name="navi-segment-aaa" checked>
                 <div class="segment__button">Yes</div>
             </div>
             <div class="segment__item">
-                <input type="radio" class="segment__input" name="navi-segment-a">
+                <input type="radio" class="segment__input" name="navi-segment-aaa">
                 <div class="segment__button">No</div>
             </div>
         </div>
