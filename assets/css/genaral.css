@@ -2,6 +2,10 @@
     font-family: 'Kanit', sans-serif
 }
 
+.toolbar{
+    background-color: #CE9A35;
+}
+
 .tabbar__button{
     background-color: #FFC149;
     color: white;

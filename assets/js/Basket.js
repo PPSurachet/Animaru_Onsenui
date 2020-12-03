@@ -19,20 +19,20 @@ const getBasketForUser = (user) => {
                     `
                 <div class="borderItem">
                     <ons-row class="d-flex justify-content-center align-items-center mt-2">
-                    <img class="BasketPets" src="${doc.data().photoURL}" id="${doc.data().Breed}" width="170" height="140">
-                    <div class="ml-2">
-                        <div class="title-basket">Breed : ${doc.data().Breed}</div>
-                        <div class="title-basket">Breeder : ${doc.data().Breeder}</div>
-                        <ons-row class="d-flex justify-content-between" style="color: rgb(255, 0, 0);">
-                            <div class="title-basket">ราคา :</div>
-                            <div class="title-basket">${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} บาท</div>
-                        </ons-row>
-                        <div class="justify-content-between mt-2">
-                            <button class="btn button_color btn-xs confirmOrder" id="${doc.data().Breed}">ยืนยัน</button>
-                            <button class="btn button_color_Delete btn-xs" onclick="deleteBasket('${doc.id}','${doc.data().Breed}')">ลบออก</button>
+                        <img class="BasketPets" src="${doc.data().photoURL}" id="${doc.data().Breed}" width="170" height="140">
+                        <div class="ml-2">
+                            <div class="title-basket">Breed : ${doc.data().Breed}</div>
+                            <div class="title-basket">Breeder : ${doc.data().Breeder}</div>
+                            <ons-row class="d-flex justify-content-between" style="color: rgb(255, 0, 0);">
+                                <div class="title-basket">ราคา :</div>
+                                <div class="title-basket">${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} บาท</div>
+                            </ons-row>
+                            <div class="justify-content-between mt-2">
+                                <button class="btn button_color btn-xs confirmOrder" id="${doc.data().Breed}">ยืนยัน</button>
+                                <button class="btn button_color_Delete btn-xs" onclick="deleteBasket('${doc.id}','${doc.data().Breed}')">ลบออก</button>
+                            </div>
                         </div>
-                    </div>
-                </ons-row>
+                    </ons-row>
                 </div>
                 `
                 $("#showBasket").append(result)
@@ -151,8 +151,8 @@ const orderPage = (Breed) => {
                 `
                 <div class="ml-4 mt-4 h5">ร้านค้า ${doc.data().Breeder}</div>
                 <div class="borderItem">
-                    <ons-row class="d-flex justify-content-center align-items-center">
-                        <img class="" src="${doc.data().photoURL}" width="170" height="120">
+                    <ons-row class="d-flex justify-content-center align-items-center mt-2">
+                        <img class="BasketPets" src="${doc.data().photoURL}" id="${doc.data().Breed}" width="170" height="140">
                         <div class="ml-2">
                             <div class="title-basket">Breed : ${doc.data().Breed}</div>
                             <div class="title-basket">Breeder : ${doc.data().Breeder}</div>
@@ -163,6 +163,23 @@ const orderPage = (Breed) => {
                         </div>
                     </ons-row>
                 </div>
+                <div class="m-4">
+                    <ons-row class="locationBox p-2">
+                        <ons-col class="col-3 pr-0">
+                            <img src="/assets/image/Location.png" width="55" alt="" srcset="">
+                        </ons-col>
+                        <ons-col class="col-9 pl-0" id="showLocation">
+                            <div class="location">
+                                32/11 หมู่ 1 ถ.วิชิตสงคราม ต.กะทู้ อ.กะทู้ จ.ภูเก็ต 83120
+                            </div>
+                        </ons-col>
+                    </ons-row>
+                </div>
+                <div class="ml-4 mr-4 mt-3">
+                    <button type="button" class="btn btn-primary btn-block btn-lg font-weight-bold"
+                    onclick="Payment('${doc.data().Breed}','${doc.data().Breeder}','${doc.data().Price}','${doc.id}')" 
+                    style="background-color: #CE9A35;border-color: #CE9A35;">PAYMENT</button>
+                </div>
                 `
             $("#showOrderPets").append(result)
         });
@@ -172,5 +189,44 @@ const orderPage = (Breed) => {
 const backBasket = () => {
     $("#BackBasket").click(function () {
         document.querySelector("#Navigator_basket").popPage();
+    })
+}
+
+const Payment = (Breed, Breeder, Price, docID) => {
+    const user = firebase.auth().currentUser;
+    ons.notification.confirm({
+        title: Breed,
+        message: "ยืนยันชำระเงิน",
+        callback: function (index) {
+            if (index == 1) {
+                db.collection("History").add({
+                    Breed: Breed,
+                    Breeder: Breeder,
+                    Price: Price,
+                    Owner: user.uid,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                }).then(function (docRef) {
+                    db.collection("Pets").doc(docID).update({
+                        Basket: firebase.firestore.FieldValue.arrayRemove(user.uid)
+                    }).then(function () {
+                        getBasketForUser(user);
+                        ons.notification.alert({
+                            title: "Animaru",
+                            message: "Payment Success",
+                        }).then(function () {
+                            getHistory();
+                            document.querySelector("#Navigator_basket").popPage();
+                        })
+                    }).catch(function () {
+
+                    })
+                }).catch(function (error) {
+                    ons.notification.alert({
+                        title: "Animaru",
+                        message: error,
+                    });
+                });
+            }
+        }
     })
 }

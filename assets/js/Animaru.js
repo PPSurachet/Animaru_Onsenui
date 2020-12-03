@@ -21,6 +21,7 @@ const checkUserSignIn = () => {
 }
 
 const profileUser = (user) => {
+    $("#showProfile").empty();
     const result =
         `                    
         <ons-row class="d-flex justify-content-start">
