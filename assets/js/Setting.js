@@ -4,6 +4,7 @@ document.addEventListener('init', function (event) {
         myStore();
         SignOut();
         gotoEdit();
+        gotoHistory();
     } else if (page.id === 'myShopPage') {
         goBackSetting();
     } else if (page.id === 'profilePage') {
@@ -24,6 +25,7 @@ const myStore = () => {
 
 const storePage = () => {
     const user = firebase.auth().currentUser;
+    let countItem = 0;
     $("#showMyShop").empty();
     db.collection("Shops").get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
@@ -39,17 +41,40 @@ const storePage = () => {
                     <ons-col class="col-7 text">
                         <div>${doc.data().Name}</div>
                         <ons-row class="d-flex justify-content-start container1">
-                        <ons-col class="col-4 editH">
-                            ${doc.data().Type}
-                        </ons-col>
+                            <ons-col class="col-4 editH">
+                                ${doc.data().Type}
+                            </ons-col>
                         </ons-row>
                         <div>คะแนนร้านค้า : ${doc.data().Rating}</div>
                     </ons-col>
-                </ons-row>`
+                </ons-row>
+                <div class="showaddData">
+                    <img src="/assets/image/addItem.jpg"onclick="addAnimaruForm()" style="width: 100%;">
+                </div>`
                 showPetsMyShop(doc.data().Name)
                 $("#showMyShop").append(result)
+                countItem++;
             }
         });
+        if (countItem == 0) {
+            const result = /*html*/
+                `
+                <div class="editbtnSelect" style="margin-top:10rem">
+                    <div class="text-center mt-5 mb-1 noBasket">
+                        คุณยังไม่มีร้านค้า
+                    </div>
+                    <div class="text-center mb-3 noBasket">
+                        ต้องการเปิดร้านค้ากับเรากดปุ่มด้านล่าง
+                    </div>
+                    <button type="button" class="confirmEditBtn" id="openShop">Open Shop</button>
+                </div>
+            `
+            $("#showMyShop").append(result)
+        }
+
+        $("#openShop").click(function () {
+            document.querySelector("#Navigator_Shop").pushPage("views/Setting/openShop.html");
+        })
     });
 }
 
@@ -57,23 +82,25 @@ const showPetsMyShop = (Breeder) => {
     $(".showMyShop").empty();
     db.collection("Pets").where("Breeder", "==", Breeder).get().then(function (querySnapshot) {
         querySnapshot.forEach(function (doc) {
-            const result = `
+            const result =
+                /*html*/
+                `
             <ons-col class="col-6 p-1">
-            <div class="containerH">
-            <img src="${doc.data().photoURL}" width="100%">
-                <div>Breed : ${doc.data().Breed}</div>
-                <div>Breeder :  ${doc.data().Breeder}</div>
-                <div>Bark : Yes</div>
-                <ons-row class="mt-2 text-center">
-                    <ons-col class="col-6 p-0">
-                        <button class="btn btnEdit">Edit</button>
-                    </ons-col>
-                    <ons-col class="col-6 p-0">
-                        <button class="btn btnDelete" onclick="deletePetsInShop('${doc.id}')">Delete</button>
-                    </ons-col>
-                </ons-row>
-            </div>
-        </ons-col>
+                <div class="containerH">
+                <img src="${doc.data().photoURL}" width="100%">
+                    <div class="font-weight-bold">Breed : ${doc.data().Breed}</div>
+                    <div class="font-weight-bold">Breeder :  ${doc.data().Breeder}</div>
+                    <div class="font-weight-bold">Price : ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</div>
+                    <ons-row class="mt-2 text-center">
+                        <ons-col class="col-6 p-0">
+                            <button class="btn btnEdit">Edit</button>
+                        </ons-col>
+                        <ons-col class="col-6 p-0">
+                            <button class="btn btnDelete" onclick="deletePetsInShop('${doc.id}')">Delete</button>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </ons-col>
             `
             $(".showMyShop").append(result);
         });
@@ -81,14 +108,14 @@ const showPetsMyShop = (Breeder) => {
 }
 
 const deletePetsInShop = (docID) => {
-    db.collection("Pets").doc(docID).delete().then(function() {
+    db.collection("Pets").doc(docID).delete().then(function () {
         ons.notification.alert({
             title: "Animaru",
             message: "Delete Pets Success",
-        }).then(function(){
+        }).then(function () {
             storePage();
         })
-    }).catch(function(error) {
+    }).catch(function (error) {
         ons.notification.alert({
             title: "Animaru",
             message: error,
@@ -112,7 +139,7 @@ const SignOut = () => {
         });
     })
 }
-//----------------------- add data ---------------------------------------
+
 const addAnimaruForm = () => {
     const user = firebase.auth().currentUser;
     db.collection("Shops").where("Owner", "==", user.uid).get().then(function (querySnapshot) {
@@ -128,7 +155,6 @@ const backfromAdd = () => {
     document.querySelector("#Navigator_setting").popPage();
 }
 
-//----------------------- Edit profile ---------------------------------------
 const gotoEdit = () => {
     $("#editProfilePage").click(function () {
         document.querySelector("#Navigator_setting").pushPage("views/Setting/profile.html");
@@ -207,14 +233,28 @@ const editProfile = (user) => {
             </ons-row>
         </div>
         <div class="editbtnSelect">
-            <input type="button" class="confirmEditBtn" value="Confirm">
-        </div>
+            <button type="button" class="confirmEditBtn" id="confirmProfile">Confirm</button>
         </div>
     `
     $("#showProfileEdit").append(result)
 
-    $("#confirmEditBtn").click(function () {
-        console.log("eiei");
+    $("#confirmProfile").click(function () {
+        const userName = $("#username").val()
+        const user = firebase.auth().currentUser;
+
+        user.updateProfile({
+            displayName: userName,
+        }).then(function () {
+            ons.notification.alert({
+                title: userName,
+                message: "Update Complete"
+            }).then(function () {
+                profileUser(user);
+                document.querySelector("#Navigator_setting").popPage();
+            })
+        }).catch(function (error) {
+            // An error happened.
+        });
     })
 }
 
@@ -253,16 +293,16 @@ const confirmBtn = () => {
             Gender: Gender,
             Price: Price,
             Age: Age + " " + Years,
-            Type:Type,
+            Type: Type,
             Description: Description,
             photoURL: photoURL,
-            Basket : [],
+            Basket: [],
         }).then(function (docRef) {
             storePage();
             ons.notification.alert({
                 title: "Animaru",
                 message: "Add Pets Success",
-            }).then(function(){
+            }).then(function () {
                 document.querySelector("#Navigator_Shop").popPage();
             })
         }).catch(function (error) {
@@ -274,3 +314,94 @@ const confirmBtn = () => {
     })
 }
 
+const gotoHistory = () => {
+    $("#btnHistory").click(function () {
+        getHistory();
+        document.querySelector("#Navigator_setting").pushPage("views/Setting/History.html");
+    })
+}
+
+const getHistory = () => {
+    const user = firebase.auth().currentUser;
+    let countItem = 0;
+    db.collection("History").where("Owner", "==", user.uid).get().then(function (querySnapshot) {
+        querySnapshot.forEach(function (doc) {
+            const convertDate = new Date((doc.data().timestamp.seconds) * 1000).toLocaleString()
+
+            const result = /*html*/
+                `
+                <div class="row d-flex align-items-center rowOrder">
+                    <div class="col-2 p-0 text-center">
+                        <ons-icon size="35px" style="color: #00ff11;" icon="md-check-circle" class="list-item__icon">
+                        </ons-icon>
+                    </div>
+                    <div class="col-7 p-0">
+                        <div class="text-order">${doc.data().Breeder}</div>
+                        <div class="text-order">${doc.data().Breed}</div>
+                    </div>
+                    <div class="col-3 p-0">
+                        <div class="text-right text-order" style="color: #00ff11;font-size: 17px;">
+                            ${doc.data().Price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")} <span style="color: #00ff11">฿</span>
+                        </div>
+                        <div class="text-right text-orderDate">
+                            ${convertDate.substring(0, 9)}
+                        </div>
+                    </div>
+                </div>
+            `
+            countItem++;
+            $("#showHistoryOrder").append(result)
+        });
+        if (countItem == 0) {
+            const result = /*html*/
+                `
+            <div class="text-center mt-5 noBasket">
+                No Order History
+            </div>
+            `
+            $("#showHistoryOrder").append(result)
+        }
+    });
+}
+
+const backHistroy = () => {
+    document.querySelector("#Navigator_setting").popPage();
+}
+
+const createShop = () => {
+    const user = firebase.auth().currentUser;
+    const Name = $("#Name").val();
+    const Type = $("input[type='checkbox']:checked").val();
+    ons.notification.confirm({
+        title: Name,
+        message: "Create Your Shop",
+        callback: (index) => {
+            if (index == 1) {
+                db.collection("Shops").add({
+                    Name: Name,
+                    Owner: user.uid,
+                    PhotoURL: user.photoURL,
+                    Type: Type,
+                    Rating: 0
+                }).then(function (docRef) {
+                    storePage();
+                    ons.notification.alert({
+                        title: "Animaru",
+                        message: "Create Shop Complete",
+                    }).then(function () {
+                        document.querySelector("#Navigator_Shop").popPage();
+                    })
+                }).catch(function (error) {
+                    ons.notification.alert({
+                        title: "Animaru",
+                        message: error,
+                    });
+                });
+            }
+        }
+    })
+}
+
+const backCreateShop = () => {
+    document.querySelector("#Navigator_Shop").popPage();
+}

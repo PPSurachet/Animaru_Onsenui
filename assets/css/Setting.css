@@ -83,12 +83,12 @@ ons-list-item{
 .imgprofile{
     margin-top: 1rem;
     border-radius: 70px;
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .profileName{
-    font-size: 25px;
+    font-size: 20px;
     margin-top: 2rem;
     margin-left: 0.5rem;
     font-weight: bold;
@@ -252,10 +252,6 @@ ons-list-item{
     margin-bottom: 2rem;
 }
 
-.addAreaBorder{
-    /* border: rgb(165, 165, 165) solid 1px; */
-}
-
 .titleBG{
     background-color: #FFC149;
     height: 53.600px;
@@ -303,3 +299,28 @@ ons-list-item{
     background-color: goldenrod;
     margin-bottom: 20px;
 }
+
+.rowOrder{
+    margin: 0.5rem 1rem 0.5rem 0rem;
+}
+
+.text-order{
+    font-weight: bold;
+    font-size: 18px;
+}
+.text-orderDate{
+    opacity: 0.5;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.addAnimalElement{
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+.myShopTitle3{
+    margin-top: 0.6rem;
+    font-size: 17px;
+}
+
