@@ -130,7 +130,8 @@ ons-list-item{
 .editImg{
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
-    width: 160px;
+    width: 170px;
+    height: 170px;
     border-radius: 180px;
     border: 7px solid #C4C4C4;
 }
@@ -189,12 +190,6 @@ ons-list-item{
     width: 90%;
     height: 35px;
 }
-.addAnimaru{
-    width: 388.875px;
-    margin-left: 0.7rem;
-    margin-bottom: 1rem;
-    border-radius: 5px;
-}
 
 .formTitle{
     text-align: center;
@@ -212,9 +207,10 @@ ons-list-item{
     color: #fff;
 }
 
-.formCenter{
+/* .formCenter{
     margin-left: 2rem;
-}
+    margin-right: 2rem;
+} */
 
 .formSize{
     width: 380px;
@@ -257,7 +253,7 @@ ons-list-item{
 }
 
 .addAreaBorder{
-    border: rgb(165, 165, 165) solid 1px;
+    /* border: rgb(165, 165, 165) solid 1px; */
 }
 
 .titleBG{
@@ -272,8 +268,38 @@ ons-list-item{
 }
 
 .editBtn{
-    background-color:#FFC149;
+    background-color: goldenrod;
     color: white;
     margin-top: 0.5rem;
     font-size: 14px;
+}
+
+.btnEdit{
+    color : white;
+    background-color: #df9a11;
+    width: 90%;
+}
+
+.btnDelete{
+    color : white;
+    background-color: #FA043F;
+    width: 90%;
+}
+
+.showaddData{
+    margin-left: 9px;
+    margin-right: 9px;
+    margin-bottom: 8px;
+}
+
+.addpetBtn{
+    color: white;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 80%;
+    border: none;
+    box-shadow: 5px 5px 6px 0 #64646480;
+    border-radius: 8px;
+    background-color: goldenrod;
+    margin-bottom: 20px;
 }
